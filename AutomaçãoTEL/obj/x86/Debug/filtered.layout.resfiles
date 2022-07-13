@@ -9,4 +9,8 @@ Assets\Wide310x150Logo.scale-200.png
 App.xbf
 AutomaçãoTEL.xr.xml
 MainPage.xbf
+Views\Bluetooth.xbf
+Views\Config.xbf
+Views\Home.xbf
+Views\Wifi.xbf
 Properties\Default.rd.xml

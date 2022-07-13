@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\10088365\\source\\repos\\AutomaçãoTEL\\AutomaçãoTEL\\AutomaçãoTEL.csproj": {}
+    "C:\\Users\\Teste\\Documents\\GitHub\\Automa-oTEL\\AutomaçãoTEL\\AutomaçãoTEL.csproj": {}
   },
   "projects": {
-    "C:\\Users\\10088365\\source\\repos\\AutomaçãoTEL\\AutomaçãoTEL\\AutomaçãoTEL.csproj": {
+    "C:\\Users\\Teste\\Documents\\GitHub\\Automa-oTEL\\AutomaçãoTEL\\AutomaçãoTEL.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\10088365\\source\\repos\\AutomaçãoTEL\\AutomaçãoTEL\\AutomaçãoTEL.csproj",
+        "projectUniqueName": "C:\\Users\\Teste\\Documents\\GitHub\\Automa-oTEL\\AutomaçãoTEL\\AutomaçãoTEL.csproj",
         "projectName": "AutomaçãoTEL",
-        "projectPath": "C:\\Users\\10088365\\source\\repos\\AutomaçãoTEL\\AutomaçãoTEL\\AutomaçãoTEL.csproj",
-        "packagesPath": "C:\\Users\\10088365\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\10088365\\source\\repos\\AutomaçãoTEL\\AutomaçãoTEL\\obj\\",
+        "projectPath": "C:\\Users\\Teste\\Documents\\GitHub\\Automa-oTEL\\AutomaçãoTEL\\AutomaçãoTEL.csproj",
+        "packagesPath": "C:\\Users\\Teste\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Teste\\Documents\\GitHub\\Automa-oTEL\\AutomaçãoTEL\\obj\\",
         "projectStyle": "PackageReference",
         "skipContentFileWrite": true,
         "fallbackFolders": [
@@ -19,7 +19,7 @@
           "C:\\Program Files (x86)\\Microsoft SDKs\\UWPNuGetPackages\\"
         ],
         "configFilePaths": [
-          "C:\\Users\\10088365\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Teste\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
