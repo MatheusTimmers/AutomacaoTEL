@@ -69,9 +69,21 @@ namespace AutomaçãoTEL
             var item = args.InvokedItemContainer as muxc.NavigationViewItem;
             if (item == null || item == _lastItem)
                 return;
-            var clickedView = item.Tag?.ToString() ?? "Config";
-            if (!NavigateToView(clickedView)) return;
-            _lastItem = item;
+            if (args.IsSettingsInvoked == true)
+            {
+                NavigateToView("Config");
+            }
+            else
+            {
+                var clickedView = item.Tag.ToString();
+                if (!NavigateToView(clickedView)) return;
+            }
+            
+        }
+
+        private void ContentFrame_NavigationFailed(object sender, NavigationFailedEventArgs e)
+        {
+            throw new Exception("Failed to load Page " + e.SourcePageType.FullName);
         }
     }
 }

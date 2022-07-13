@@ -6,12 +6,81 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d"
-    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}" Width="420" Height="650">
 
     <Grid>
-        <TextBlock Text="Pagina wifi"
-                   VerticalAlignment="Center"
-                   HorizontalAlignment="Center"/>
+        <StackPanel VerticalAlignment="Top" HorizontalAlignment="Center" Orientation="Vertical">
+            <TextBlock  Text="Automação WIFI"
+                        VerticalAlignment="Top"
+                        HorizontalAlignment="Center"
+                        Margin="0,0,0,0"
+                        FontSize="28"
+                        />
+            <TextBlock Text="By Matheus Productions"
+                        VerticalAlignment="Bottom"
+                        HorizontalAlignment="Right"
+                        FontSize="15"
+                        Margin="20,-5,0,0" />
+        </StackPanel>
+        <ListView x:ConnectionId='2' x:Name="LVDepartment"  ScrollViewer.VerticalScrollBarVisibility="Auto" VerticalAlignment="Center" HorizontalAlignment="Center" Height="300" Width="350">
+            <CheckBox x:ConnectionId='4' x:Name="OptionsAllCheckBox" Content="Select all"/>
+            <CheckBox x:ConnectionId='5' x:Name="Option1CheckBox"    Content="802.11a" Margin="24,0,0,0" />
+            <CheckBox x:ConnectionId='6' x:Name="Option2CheckBox"    Content="802.11b" Margin="24,0,0,0" />
+            <CheckBox x:ConnectionId='7' x:Name="Option3CheckBox"    Content="802.11g" Margin="24,0,0,0" />
+            <CheckBox x:ConnectionId='8' x:Name="Option4CheckBox"    Content="802.11n (20)" Margin="24,0,0,0"/>
+            <CheckBox x:ConnectionId='9' x:Name="Option5CheckBox"    Content="802.11ac (20)" Margin="24,0,0,0" />
+            <CheckBox x:ConnectionId='10' x:Name="Option6CheckBox"    Content="802.11ax (20)" Margin="24,0,0,0"/>
+            <CheckBox x:ConnectionId='11' x:Name="Option7CheckBox"    Content="802.11n (40)" Margin="24,0,0,0" />
+            <CheckBox x:ConnectionId='12' x:Name="Option8CheckBox"    Content="802.11ac (40)" Margin="24,0,0,0"/>
+            <CheckBox x:ConnectionId='13' x:Name="Option9CheckBox"    Content="802.11ax (40)" Margin="24,0,0,0" />
+            <CheckBox x:ConnectionId='14' x:Name="Option10CheckBox"    Content="802.11n (80)" Margin="24,0,0,0"/>
+            <CheckBox x:ConnectionId='15' x:Name="Option11CheckBox"   Content="802.11ac (80)" Margin="24,0,0,0" />
+            <CheckBox x:ConnectionId='16' x:Name="Option12CheckBox"   Content="802.11ax (80)" Margin="24,0,0,0"/>
+            <CheckBox x:ConnectionId='17' x:Name="Option13CheckBox"   Content="802.11ac (160)" Margin="24,0,0,0"/>
+            <CheckBox x:ConnectionId='18' x:Name="Option14CheckBox"   Content="802.11ax (160)" Margin="24,0,0,0"/>
+        </ListView>
+        <StackPanel VerticalAlignment="Bottom"
+                    HorizontalAlignment="Center"
+                    Orientation="Vertical">
+            <TextBlock x:ConnectionId='3' x:Name="TbAto237"
+                        Text="Ensaios do Ato 237"
+                        FontSize="14"
+                        Width="200"
+                        Margin="5,0,0,0"
+                        FontFamily="Consolas"
+                        TextAlignment="Left"
+                        HorizontalAlignment="Left" />
+            <StackPanel VerticalAlignment="Bottom"
+                        HorizontalAlignment="Center" 
+                        Orientation="Horizontal" Margin="0,0,0,60">
+                <Button Content="Item 10"
+                    Width="110" 
+                    Height="30" 
+                    HorizontalAlignment="Left"
+                    VerticalAlignment="Bottom"
+                    Margin="0,5,5,5"/>
+                <Button Content="Item 11"
+                    Width="110" 
+                    Height="30"  
+                    HorizontalAlignment="Right"
+                    VerticalAlignment="Bottom"
+                    Margin="5" 
+                    />
+                <Button Content="Item 12"
+                    Width="110" 
+                    Height="30"  
+                    HorizontalAlignment="Right"
+                    VerticalAlignment="Bottom"
+                    Margin="5,5,0,5" />
+            </StackPanel>
+            <Button Content="Confirmar"
+                Width="110"
+                Height="30"
+                Margin="0,-50,0,20"
+                HorizontalAlignment="Right"
+                VerticalAlignment="Bottom"
+                />
+        </StackPanel>
 
     </Grid>
 </Page>

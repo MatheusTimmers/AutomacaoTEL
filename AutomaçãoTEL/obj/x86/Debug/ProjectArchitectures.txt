@@ -1,1 +1,1 @@
-C:\Users\Teste\Documents\GitHub\Automa-oTEL\AutomaçãoTEL\AutomaçãoTEL.csproj;x86
+C:\Users\10088365\source\repos\AutomaçãoTEL\AutomaçãoTEL\AutomaçãoTEL.csproj;x86

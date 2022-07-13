@@ -11,9 +11,10 @@
     Width="400">
     
     <Grid>
-        <TextBlock Text="Pagina Incial"
+        <TextBlock Text="Eu não sei como você chegou aqui, mas saia imediatamente"
                    VerticalAlignment="Center"
-                   HorizontalAlignment="Center"/>
+                   HorizontalAlignment="Center"
+                   FontSize="12"/>
 
     </Grid>
 </Page>

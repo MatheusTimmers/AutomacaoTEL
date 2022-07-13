@@ -1,8 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
-    <Machine>DESKTOP-RQFHRNP</Machine>
-    <WindowsUser>Teste</WindowsUser>
+    <Machine>W3099199</Machine>
+    <WindowsUser>10088365</WindowsUser>
     <TargetPlatformIdentifier>UAP</TargetPlatformIdentifier>
     <TargetOsVersion>10.0</TargetOsVersion>
     <TargetOsDescription>Windows 10.0</TargetOsDescription>
@@ -10,76 +10,76 @@
     <PackageArchitecture>x86</PackageArchitecture>
     <PackageIdentityName>c9307a3c-f64c-4e93-baba-ec47fd53fd9d</PackageIdentityName>
     <PackageIdentityPublisher>CN=10088365</PackageIdentityPublisher>
-    <IntermediateOutputPath>C:\Users\Teste\Documents\GitHub\Automa-oTEL\AutomaçãoTEL\obj\x86\Debug\</IntermediateOutputPath>
+    <IntermediateOutputPath>C:\Users\10088365\source\repos\AutomaçãoTEL\AutomaçãoTEL\obj\x86\Debug\</IntermediateOutputPath>
     <RemoteDeploymentType></RemoteDeploymentType>
     <PackageRegistrationPath></PackageRegistrationPath>
     <RemoveNonLayoutFiles>true</RemoveNonLayoutFiles>
     <DeployOptionalPackages>false</DeployOptionalPackages>
     <WindowsSdkPath>C:\Program Files %28x86%29\Windows Kits\10\</WindowsSdkPath>
-    <LayoutDir>C:\Users\Teste\Documents\GitHub\Automa-oTEL\AutomaçãoTEL\bin\x86\Debug\AppX</LayoutDir>
+    <LayoutDir>C:\Users\10088365\source\repos\AutomaçãoTEL\AutomaçãoTEL\bin\x86\Debug\AppX</LayoutDir>
   </PropertyGroup>
   <ItemGroup>
-    <AppXManifest Include="C:\Users\Teste\Documents\GitHub\Automa-oTEL\AutomaçãoTEL\bin\x86\Debug\Core\AppxManifest.xml">
+    <AppXManifest Include="C:\Users\10088365\source\repos\AutomaçãoTEL\AutomaçãoTEL\bin\x86\Debug\Core\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
-    <AppxPackagedFile Include="C:\Users\Teste\Documents\GitHub\Automa-oTEL\AutomaçãoTEL\bin\x86\Debug\AutomaçãoTEL.exe">
+    <AppxPackagedFile Include="C:\Users\10088365\source\repos\AutomaçãoTEL\AutomaçãoTEL\bin\x86\Debug\AutomaçãoTEL.exe">
       <PackagePath>entrypoint\AutomaçãoTEL.exe</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Microsoft SDKs\UWPNuGetPackages\runtime.win10-x86.microsoft.netcore.universalwindowsplatform\6.2.13\runtimes\win10-x86\lib\uap10.0.15138\System.Runtime.dll">
       <PackagePath>System.Runtime.dll</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Teste\Documents\GitHub\Automa-oTEL\AutomaçãoTEL\Properties\Default.rd.xml">
+    <AppxPackagedFile Include="C:\Users\10088365\source\repos\AutomaçãoTEL\AutomaçãoTEL\Properties\Default.rd.xml">
       <PackagePath>Properties\Default.rd.xml</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Teste\Documents\GitHub\Automa-oTEL\AutomaçãoTEL\Assets\LockScreenLogo.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\10088365\source\repos\AutomaçãoTEL\AutomaçãoTEL\Assets\LockScreenLogo.scale-200.png">
       <PackagePath>Assets\LockScreenLogo.scale-200.png</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Teste\Documents\GitHub\Automa-oTEL\AutomaçãoTEL\Assets\SplashScreen.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\10088365\source\repos\AutomaçãoTEL\AutomaçãoTEL\Assets\SplashScreen.scale-200.png">
       <PackagePath>Assets\SplashScreen.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Teste\Documents\GitHub\Automa-oTEL\AutomaçãoTEL\Assets\Square150x150Logo.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\10088365\source\repos\AutomaçãoTEL\AutomaçãoTEL\Assets\Square150x150Logo.scale-200.png">
       <PackagePath>Assets\Square150x150Logo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Teste\Documents\GitHub\Automa-oTEL\AutomaçãoTEL\Assets\Square44x44Logo.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\10088365\source\repos\AutomaçãoTEL\AutomaçãoTEL\Assets\Square44x44Logo.scale-200.png">
       <PackagePath>Assets\Square44x44Logo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Teste\Documents\GitHub\Automa-oTEL\AutomaçãoTEL\Assets\Square44x44Logo.targetsize-24_altform-unplated.png">
+    <AppxPackagedFile Include="C:\Users\10088365\source\repos\AutomaçãoTEL\AutomaçãoTEL\Assets\Square44x44Logo.targetsize-24_altform-unplated.png">
       <PackagePath>Assets\Square44x44Logo.targetsize-24_altform-unplated.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Teste\Documents\GitHub\Automa-oTEL\AutomaçãoTEL\Assets\StoreLogo.png">
+    <AppxPackagedFile Include="C:\Users\10088365\source\repos\AutomaçãoTEL\AutomaçãoTEL\Assets\StoreLogo.png">
       <PackagePath>Assets\StoreLogo.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Teste\Documents\GitHub\Automa-oTEL\AutomaçãoTEL\Assets\Wide310x150Logo.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\10088365\source\repos\AutomaçãoTEL\AutomaçãoTEL\Assets\Wide310x150Logo.scale-200.png">
       <PackagePath>Assets\Wide310x150Logo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Teste\Documents\GitHub\Automa-oTEL\AutomaçãoTEL\bin\x86\Debug\AutomaçãoTEL.xr.xml">
+    <AppxPackagedFile Include="C:\Users\10088365\source\repos\AutomaçãoTEL\AutomaçãoTEL\bin\x86\Debug\AutomaçãoTEL.xr.xml">
       <PackagePath>AutomaçãoTEL.xr.xml</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Teste\Documents\GitHub\Automa-oTEL\AutomaçãoTEL\bin\x86\Debug\App.xbf">
+    <AppxPackagedFile Include="C:\Users\10088365\source\repos\AutomaçãoTEL\AutomaçãoTEL\bin\x86\Debug\App.xbf">
       <PackagePath>App.xbf</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Teste\Documents\GitHub\Automa-oTEL\AutomaçãoTEL\bin\x86\Debug\MainPage.xbf">
+    <AppxPackagedFile Include="C:\Users\10088365\source\repos\AutomaçãoTEL\AutomaçãoTEL\bin\x86\Debug\MainPage.xbf">
       <PackagePath>MainPage.xbf</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Teste\Documents\GitHub\Automa-oTEL\AutomaçãoTEL\bin\x86\Debug\Views\Bluetooth.xbf">
+    <AppxPackagedFile Include="C:\Users\10088365\source\repos\AutomaçãoTEL\AutomaçãoTEL\bin\x86\Debug\Views\Bluetooth.xbf">
       <PackagePath>Views\Bluetooth.xbf</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Teste\Documents\GitHub\Automa-oTEL\AutomaçãoTEL\bin\x86\Debug\Views\Config.xbf">
+    <AppxPackagedFile Include="C:\Users\10088365\source\repos\AutomaçãoTEL\AutomaçãoTEL\bin\x86\Debug\Views\Config.xbf">
       <PackagePath>Views\Config.xbf</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Teste\Documents\GitHub\Automa-oTEL\AutomaçãoTEL\bin\x86\Debug\Views\Home.xbf">
+    <AppxPackagedFile Include="C:\Users\10088365\source\repos\AutomaçãoTEL\AutomaçãoTEL\bin\x86\Debug\Views\Home.xbf">
       <PackagePath>Views\Home.xbf</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Teste\Documents\GitHub\Automa-oTEL\AutomaçãoTEL\bin\x86\Debug\Views\Wifi.xbf">
+    <AppxPackagedFile Include="C:\Users\10088365\source\repos\AutomaçãoTEL\AutomaçãoTEL\bin\x86\Debug\Views\Wifi.xbf">
       <PackagePath>Views\Wifi.xbf</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Microsoft SDKs\Windows Kits\10\ExtensionSDKs\Microsoft.UniversalCRT.Debug\10.0.17134.0\\redist\Debug\x86\ucrtbased.dll">
@@ -88,23 +88,23 @@
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Windows Kits\10\UnionMetadata\10.0.17134.0\Windows.winmd">
       <PackagePath>WinMetadata\Windows.winmd</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Teste\.nuget\packages\microsoft.ui.xaml\2.0.181011001\build\..\lib\uap10.0\Microsoft.UI.Xaml.winmd">
+    <AppxPackagedFile Include="C:\Users\10088365\.nuget\packages\microsoft.ui.xaml\2.0.181011001\build\..\lib\uap10.0\Microsoft.UI.Xaml.winmd">
       <PackagePath>WinMetadata\Microsoft.UI.Xaml.winmd</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Teste\Documents\GitHub\Automa-oTEL\AutomaçãoTEL\bin\x86\Debug\resources.pri">
+    <AppxPackagedFile Include="C:\Users\10088365\source\repos\AutomaçãoTEL\AutomaçãoTEL\bin\x86\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Teste\Documents\GitHub\Automa-oTEL\AutomaçãoTEL\bin\x86\Debug\Core\AutomaçãoTEL.exe">
+    <AppxPackagedFile Include="C:\Users\10088365\source\repos\AutomaçãoTEL\AutomaçãoTEL\bin\x86\Debug\Core\AutomaçãoTEL.exe">
       <PackagePath>AutomaçãoTEL.exe</PackagePath>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>
-    <ResolvedSDKReference Include="C:\Users\Teste\.nuget\packages\microsoft.ui.xaml\2.0.181011001\build\..\tools\AppX\x86\Release\Microsoft.UI.Xaml.2.0.appx">
+    <ResolvedSDKReference Include="C:\Users\10088365\.nuget\packages\microsoft.ui.xaml\2.0.181011001\build\..\tools\AppX\x86\Release\Microsoft.UI.Xaml.2.0.appx">
       <Name>Microsoft.UI.Xaml.2.0</Name>
       <Version>2.1810.11001.0</Version>
       <Architecture>x86</Architecture>
       <FrameworkIdentity>Name = Microsoft.UI.Xaml.2.0, MinVersion = 2.1810.11001.0, Publisher = %27CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US%27</FrameworkIdentity>
-      <AppxLocation>C:\Users\Teste\.nuget\packages\microsoft.ui.xaml\2.0.181011001\build\..\tools\AppX\x86\Release\Microsoft.UI.Xaml.2.0.appx</AppxLocation>
+      <AppxLocation>C:\Users\10088365\.nuget\packages\microsoft.ui.xaml\2.0.181011001\build\..\tools\AppX\x86\Release\Microsoft.UI.Xaml.2.0.appx</AppxLocation>
       <MoreInfo></MoreInfo>
     </ResolvedSDKReference>
     <ResolvedSDKReference Include="C:\Program Files %28x86%29\Microsoft SDKs\UWPNuGetPackages\runtime.win10-x86.microsoft.net.uwpcoreruntimesdk\2.2.13\build\..\tools\Appx\Microsoft.NET.CoreRuntime.2.2.appx">
