@@ -33,6 +33,7 @@
       <RootProperty Name="CompactModeThresholdWidth" />
       <RootProperty Name="PaneHeader" />
       <RootProperty Name="MenuItems" />
+      <RootProperty Name="PaneFooter" />
       <RootProperty Name="Content" />
       <RootEvent Name="Loaded" />
       <RootEvent Name="ItemInvoked" />
@@ -49,6 +50,7 @@
       <RootProperty Name="Tag" />
       <RootProperty Name="Icon" />
       <RootProperty Name="Content" />
+      <RootEvent Name="Tapped" />
     </RootType>
     <RootType FullName="Microsoft.UI.Xaml.Controls.NavigationViewItemSeparator" />
     <RootType FullName="Microsoft.UI.Xaml.Controls.NavigationViewItemHeader">
@@ -78,32 +80,40 @@
     </RootType>
     <RootType FullName="AutomaçãoTEL.MainPage" />
     <RootType FullName="Windows.UI.Xaml.Controls.StackPanel">
+      <RootProperty Name="Children" />
       <RootProperty Name="VerticalAlignment" />
       <RootProperty Name="HorizontalAlignment" />
       <RootProperty Name="Orientation" />
-      <RootProperty Name="Children" />
       <RootProperty Name="Margin" />
     </RootType>
+    <RootType FullName="Windows.UI.Xaml.Controls.TextBlock">
+      <RootProperty Name="Text" />
+      <RootProperty Name="VerticalAlignment" />
+      <RootProperty Name="HorizontalAlignment" />
+      <RootProperty Name="FontSize" />
+      <RootProperty Name="Width" />
+      <RootProperty Name="Margin" />
+      <RootProperty Name="FontFamily" />
+      <RootProperty Name="TextAlignment" />
+    </RootType>
+    <RootType FullName="Windows.UI.Xaml.Controls.TextBox">
+      <RootProperty Name="FontSize" />
+      <RootProperty Name="Margin" />
+      <RootProperty Name="HorizontalAlignment" />
+      <RootProperty Name="VerticalAlignment" />
+    </RootType>
+    <RootType FullName="AutomaçãoTEL.Views.BlankPage1" />
     <RootType FullName="Windows.UI.Xaml.Controls.ListView">
       <RootProperty Name="VerticalAlignment" />
       <RootProperty Name="HorizontalAlignment" />
       <RootProperty Name="Height" />
       <RootProperty Name="Width" />
       <RootProperty Name="Items" />
+      <RootProperty Name="Margin" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.ScrollViewer">
       <RootMethod Name="GetVerticalScrollBarVisibility" />
       <RootMethod Name="SetVerticalScrollBarVisibility" />
-    </RootType>
-    <RootType FullName="Windows.UI.Xaml.Controls.TextBlock">
-      <RootProperty Name="Text" />
-      <RootProperty Name="FontSize" />
-      <RootProperty Name="Width" />
-      <RootProperty Name="Margin" />
-      <RootProperty Name="FontFamily" />
-      <RootProperty Name="TextAlignment" />
-      <RootProperty Name="HorizontalAlignment" />
-      <RootProperty Name="VerticalAlignment" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.Button">
       <RootProperty Name="Content" />

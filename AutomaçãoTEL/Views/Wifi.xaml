@@ -22,7 +22,10 @@
                         FontSize="15"
                         Margin="20,-5,0,0" />
         </StackPanel>
-        <ListView x:Name="LVDepartment"  ScrollViewer.VerticalScrollBarVisibility="Auto" VerticalAlignment="Center" HorizontalAlignment="Center" Height="300" Width="350">
+        <StackPanel>
+            
+        </StackPanel>
+        <ListView x:Name="LVDepartment"  ScrollViewer.VerticalScrollBarVisibility="Auto" VerticalAlignment="Center" HorizontalAlignment="Center" Height="300" Width="350" Margin="-30,0,0,0">
             <CheckBox x:Name="OptionsAllCheckBox" Content="Select all"/>
             <CheckBox x:Name="Option1CheckBox"    Content="802.11a" Margin="24,0,0,0" />
             <CheckBox x:Name="Option2CheckBox"    Content="802.11b" Margin="24,0,0,0" />

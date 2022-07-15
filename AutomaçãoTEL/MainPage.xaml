@@ -19,7 +19,8 @@
                              PaneTitle="Labelo"
                              Loaded="NavView_Loaded" ItemInvoked="NavView_ItemInvoked"
                              PaneDisplayMode="LeftCompact"
-                             CompactModeThresholdWidth="1007">
+                             CompactModeThresholdWidth="1007"
+                             >
             <muxc:NavigationView.PaneHeader>
                 <Image x:Name="Header" Source="/Assets/labelo.png" Stretch="UniformToFill" Margin="0,0,0,0" HorizontalAlignment="Left" Width="216" Height="53"/>
             </muxc:NavigationView.PaneHeader>
@@ -28,17 +29,20 @@
                 <muxc:NavigationViewItemSeparator/>
                 <muxc:NavigationViewItemHeader x:Name="MainPagesHeader"
                                            Content="Main pages"/>
-                <muxc:NavigationViewItem Tag="Wifi" Content="WIFI">
+                <muxc:NavigationViewItem Tag="Wifi" Content="Wifi">
                     <muxc:NavigationViewItem.Icon>
                         <FontIcon FontFamily="Segoe MDL2 Assets" Glyph="&#xE701;"/>
                     </muxc:NavigationViewItem.Icon>
                 </muxc:NavigationViewItem>
-                <muxc:NavigationViewItem Tag="Bluetooth" Content="BlueTooth">
+                <muxc:NavigationViewItem Tag="Bluetooth" Content="Bluetooth">
                     <muxc:NavigationViewItem.Icon>
                         <FontIcon FontFamily="Segoe MDL2 Assets" Glyph="&#xE702;"/>
                     </muxc:NavigationViewItem.Icon>
                 </muxc:NavigationViewItem>
             </muxc:NavigationView.MenuItems>
+            <muxc:NavigationView.PaneFooter>
+                <muxc:NavigationViewItem Tag ="User" Content="User" Icon="Contact" Tapped="User_Tapped"  />
+            </muxc:NavigationView.PaneFooter>
             <Frame x:Name="ContentFrame" NavigationFailed="ContentFrame_NavigationFailed" 
                    />
         </muxc:NavigationView>

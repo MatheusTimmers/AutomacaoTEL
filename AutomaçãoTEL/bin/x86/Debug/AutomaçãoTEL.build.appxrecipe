@@ -70,6 +70,9 @@
     <AppxPackagedFile Include="C:\Users\10088365\source\repos\AutomaçãoTEL\AutomaçãoTEL\bin\x86\Debug\MainPage.xbf">
       <PackagePath>MainPage.xbf</PackagePath>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\10088365\source\repos\AutomaçãoTEL\AutomaçãoTEL\bin\x86\Debug\Views\User.xbf">
+      <PackagePath>Views\User.xbf</PackagePath>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\10088365\source\repos\AutomaçãoTEL\AutomaçãoTEL\bin\x86\Debug\Views\Bluetooth.xbf">
       <PackagePath>Views\Bluetooth.xbf</PackagePath>
     </AppxPackagedFile>

@@ -12,5 +12,6 @@ MainPage.xbf
 Views\Bluetooth.xbf
 Views\Config.xbf
 Views\Home.xbf
+Views\User.xbf
 Views\Wifi.xbf
 Properties\Default.rd.xml

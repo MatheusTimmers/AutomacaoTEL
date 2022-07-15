@@ -6,6 +6,7 @@ using System.Reflection;
 using System.Runtime.InteropServices.WindowsRuntime;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
+using Windows.System;
 using Windows.UI.ViewManagement;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
@@ -26,7 +27,6 @@ namespace AutomaçãoTEL
     /// </summary>
     public sealed partial class MainPage : Page
     {
-        muxc.NavigationViewItem _lastItem;
 
         public MainPage()
         {
@@ -67,7 +67,7 @@ namespace AutomaçãoTEL
         private void NavView_ItemInvoked(muxc.NavigationView sender, muxc.NavigationViewItemInvokedEventArgs args)
         {
             var item = args.InvokedItemContainer as muxc.NavigationViewItem;
-            if (item == null || item == _lastItem)
+            if (item == null)
                 return;
             if (args.IsSettingsInvoked == true)
             {
@@ -84,6 +84,13 @@ namespace AutomaçãoTEL
         private void ContentFrame_NavigationFailed(object sender, NavigationFailedEventArgs e)
         {
             throw new Exception("Failed to load Page " + e.SourcePageType.FullName);
+        }
+
+
+        private void User_Tapped(object sender, TappedRoutedEventArgs e)
+        {
+            muxc.NavigationViewItem item = sender as muxc.NavigationViewItem;
+            if (!NavigateToView(item.Tag.ToString())) return;
         }
     }
 }
