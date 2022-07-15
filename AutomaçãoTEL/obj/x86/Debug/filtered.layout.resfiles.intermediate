@@ -1,10 +1,12 @@
 WinMetadata\Windows.winmd
+Assets\labelo.png
 Assets\LockScreenLogo.scale-200.png
 Assets\SplashScreen.scale-200.png
 Assets\Square150x150Logo.scale-200.png
 Assets\Square44x44Logo.scale-200.png
 Assets\Square44x44Logo.targetsize-24_altform-unplated.png
 Assets\StoreLogo.png
+Assets\User_icon.png
 Assets\Wide310x150Logo.scale-200.png
 App.xbf
 AutomaçãoTEL.xr.xml
@@ -12,6 +14,7 @@ MainPage.xbf
 Views\Bluetooth.xbf
 Views\Config.xbf
 Views\Home.xbf
-Views\User.xbf
+Views\Login.xbf
+Views\RegistrationAccount.xbf
 Views\Wifi.xbf
 Properties\Default.rd.xml

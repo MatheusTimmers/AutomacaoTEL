@@ -31,8 +31,11 @@
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Microsoft SDKs\UWPNuGetPackages\runtime.win10-x86.microsoft.netcore.universalwindowsplatform\6.2.13\runtimes\win10-x86\lib\uap10.0.15138\System.Runtime.dll">
       <PackagePath>System.Runtime.dll</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\10088365\source\repos\AutomaçãoTEL\AutomaçãoTEL\Properties\Default.rd.xml">
-      <PackagePath>Properties\Default.rd.xml</PackagePath>
+    <AppxPackagedFile Include="C:\Users\10088365\source\repos\AutomaçãoTEL\AutomaçãoTEL\Assets\labelo.png">
+      <PackagePath>Assets\labelo.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\10088365\source\repos\AutomaçãoTEL\AutomaçãoTEL\Assets\User_icon.png">
+      <PackagePath>Assets\User_icon.png</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\10088365\source\repos\AutomaçãoTEL\AutomaçãoTEL\Assets\LockScreenLogo.scale-200.png">
       <PackagePath>Assets\LockScreenLogo.scale-200.png</PackagePath>
@@ -61,6 +64,9 @@
       <PackagePath>Assets\Wide310x150Logo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\10088365\source\repos\AutomaçãoTEL\AutomaçãoTEL\Properties\Default.rd.xml">
+      <PackagePath>Properties\Default.rd.xml</PackagePath>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\10088365\source\repos\AutomaçãoTEL\AutomaçãoTEL\bin\x86\Debug\AutomaçãoTEL.xr.xml">
       <PackagePath>AutomaçãoTEL.xr.xml</PackagePath>
     </AppxPackagedFile>
@@ -70,8 +76,11 @@
     <AppxPackagedFile Include="C:\Users\10088365\source\repos\AutomaçãoTEL\AutomaçãoTEL\bin\x86\Debug\MainPage.xbf">
       <PackagePath>MainPage.xbf</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\10088365\source\repos\AutomaçãoTEL\AutomaçãoTEL\bin\x86\Debug\Views\User.xbf">
-      <PackagePath>Views\User.xbf</PackagePath>
+    <AppxPackagedFile Include="C:\Users\10088365\source\repos\AutomaçãoTEL\AutomaçãoTEL\bin\x86\Debug\Views\Login.xbf">
+      <PackagePath>Views\Login.xbf</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\10088365\source\repos\AutomaçãoTEL\AutomaçãoTEL\bin\x86\Debug\Views\RegistrationAccount.xbf">
+      <PackagePath>Views\RegistrationAccount.xbf</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\10088365\source\repos\AutomaçãoTEL\AutomaçãoTEL\bin\x86\Debug\Views\Bluetooth.xbf">
       <PackagePath>Views\Bluetooth.xbf</PackagePath>

@@ -16,13 +16,12 @@
         <muxc:NavigationView x:Name="NavView"
                              IsBackButtonVisible="Collapsed"
                              HorizontalAlignment="Stretch"
-                             PaneTitle="Labelo"
                              Loaded="NavView_Loaded" ItemInvoked="NavView_ItemInvoked"
                              PaneDisplayMode="LeftCompact"
                              CompactModeThresholdWidth="1007"
                              >
             <muxc:NavigationView.PaneHeader>
-                <Image x:Name="Header" Source="/Assets/labelo.png" Stretch="UniformToFill" Margin="0,0,0,0" HorizontalAlignment="Left" Width="216" Height="53"/>
+                <Image x:Name="Header" Source="/Assets/labelo.png" Stretch="UniformToFill" Margin="0,0,0,0" HorizontalAlignment="Left" Width="100" Height="40"/>
             </muxc:NavigationView.PaneHeader>
             <muxc:NavigationView.MenuItems>
                 <muxc:NavigationViewItem Tag="Home" Icon="Home" Content="Home"/>
@@ -41,7 +40,7 @@
                 </muxc:NavigationViewItem>
             </muxc:NavigationView.MenuItems>
             <muxc:NavigationView.PaneFooter>
-                <muxc:NavigationViewItem Tag ="User" Content="User" Icon="Contact" Tapped="User_Tapped"  />
+                <muxc:NavigationViewItem Tag ="Account" Content="User" Icon="Contact" Tapped="AccountBt_Tapped"  />
             </muxc:NavigationView.PaneFooter>
             <Frame x:Name="ContentFrame" NavigationFailed="ContentFrame_NavigationFailed" 
                    />

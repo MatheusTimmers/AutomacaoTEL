@@ -20,9 +20,9 @@ namespace AutomaçãoTEL.Views
     /// <summary>
     /// Uma página vazia que pode ser usada isoladamente ou navegada dentro de um Quadro.
     /// </summary>
-    public sealed partial class BlankPage1 : Page
+    public sealed partial class Login : Page
     {
-        public BlankPage1()
+        public Login()
         {
             this.InitializeComponent();
         }
