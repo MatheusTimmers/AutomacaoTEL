@@ -19,7 +19,7 @@
     <DeployOptionalPackages>false</DeployOptionalPackages>
     <WindowsSdkPath>C:\Program Files %28x86%29\Windows Kits\10\</WindowsSdkPath>
     <LayoutDir>C:\Users\mathe\OneDrive\Documentos\GitHub\AutomacaoTEL\AutomaçãoTEL\bin\x86\Debug\AppX</LayoutDir>
-    <RegisteredManifestChecksum>3534B9FAF9AB68409229819A283CA6011A7BB2DFD18F04AFB77686712B3F3D43</RegisteredManifestChecksum>
+    <RegisteredManifestChecksum>9572E9AA1062E6BA2D0A7DC680FFF99EC4D1F4A542836C5CE455DFF90E684CF6</RegisteredManifestChecksum>
     <RegisteredPackageMoniker>c9307a3c-f64c-4e93-baba-ec47fd53fd9d_1.0.0.0_x86__q4m2ttj50kwnt</RegisteredPackageMoniker>
     <RegisteredUserModeAppID>c9307a3c-f64c-4e93-baba-ec47fd53fd9d_q4m2ttj50kwnt!App</RegisteredUserModeAppID>
     <RegisteredPackageID>c9307a3c-f64c-4e93-baba-ec47fd53fd9d</RegisteredPackageID>
@@ -30,13 +30,17 @@
     <AppXManifest Include="C:\Users\mathe\OneDrive\Documentos\GitHub\AutomacaoTEL\AutomaçãoTEL\bin\x86\Debug\Core\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2022-07-17T10:03:39.539</Modified>
+      <Modified>2022-07-17T22:42:24.615</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="C:\Users\mathe\OneDrive\Documentos\GitHub\AutomacaoTEL\AutomaçãoTEL\bin\x86\Debug\AutomaçãoTEL.exe">
       <PackagePath>entrypoint\AutomaçãoTEL.exe</PackagePath>
-      <Modified>2022-07-17T10:03:38.723</Modified>
+      <Modified>2022-07-17T22:42:23.621</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\mathe\.nuget\packages\firebirdsql.data.firebirdclient\9.0.2\lib\netstandard2.0\FirebirdSql.Data.FirebirdClient.dll">
+      <PackagePath>FirebirdSql.Data.FirebirdClient.dll</PackagePath>
+      <Modified>2022-07-12T13:41:14.000</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\mathe\.nuget\packages\newtonsoft.json\13.0.1\lib\netstandard2.0\Newtonsoft.Json.dll">
       <PackagePath>Newtonsoft.Json.dll</PackagePath>
@@ -45,6 +49,10 @@
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Microsoft SDKs\UWPNuGetPackages\runtime.win10-x86.microsoft.netcore.universalwindowsplatform\6.2.13\runtimes\win10-x86\lib\uap10.0.15138\System.Runtime.dll">
       <PackagePath>System.Runtime.dll</PackagePath>
       <Modified>2021-10-10T09:49:52.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\mathe\.nuget\packages\system.runtime.compilerservices.unsafe\4.5.3\lib\netstandard2.0\System.Runtime.CompilerServices.Unsafe.dll">
+      <PackagePath>System.Runtime.CompilerServices.Unsafe.dll</PackagePath>
+      <Modified>2020-02-19T10:05:16.000</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\mathe\OneDrive\Documentos\GitHub\AutomacaoTEL\AutomaçãoTEL\Assets\labelo.png">
       <PackagePath>Assets\labelo.png</PackagePath>
@@ -98,35 +106,35 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\mathe\OneDrive\Documentos\GitHub\AutomacaoTEL\AutomaçãoTEL\bin\x86\Debug\App.xbf">
       <PackagePath>App.xbf</PackagePath>
-      <Modified>2022-07-17T10:03:38.605</Modified>
+      <Modified>2022-07-17T22:42:23.336</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\mathe\OneDrive\Documentos\GitHub\AutomacaoTEL\AutomaçãoTEL\bin\x86\Debug\MainPage.xbf">
       <PackagePath>MainPage.xbf</PackagePath>
-      <Modified>2022-07-17T10:03:38.605</Modified>
+      <Modified>2022-07-17T22:42:23.336</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\mathe\OneDrive\Documentos\GitHub\AutomacaoTEL\AutomaçãoTEL\bin\x86\Debug\Views\Login.xbf">
       <PackagePath>Views\Login.xbf</PackagePath>
-      <Modified>2022-07-17T10:03:38.606</Modified>
+      <Modified>2022-07-17T22:42:23.337</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\mathe\OneDrive\Documentos\GitHub\AutomacaoTEL\AutomaçãoTEL\bin\x86\Debug\Views\RegistrationAccount.xbf">
       <PackagePath>Views\RegistrationAccount.xbf</PackagePath>
-      <Modified>2022-07-17T10:03:38.606</Modified>
+      <Modified>2022-07-17T22:42:23.337</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\mathe\OneDrive\Documentos\GitHub\AutomacaoTEL\AutomaçãoTEL\bin\x86\Debug\Views\Bluetooth.xbf">
       <PackagePath>Views\Bluetooth.xbf</PackagePath>
-      <Modified>2022-07-17T10:03:38.607</Modified>
+      <Modified>2022-07-17T22:42:23.337</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\mathe\OneDrive\Documentos\GitHub\AutomacaoTEL\AutomaçãoTEL\bin\x86\Debug\Views\Config.xbf">
       <PackagePath>Views\Config.xbf</PackagePath>
-      <Modified>2022-07-17T10:03:38.607</Modified>
+      <Modified>2022-07-17T22:42:23.337</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\mathe\OneDrive\Documentos\GitHub\AutomacaoTEL\AutomaçãoTEL\bin\x86\Debug\Views\Home.xbf">
       <PackagePath>Views\Home.xbf</PackagePath>
-      <Modified>2022-07-17T10:03:38.607</Modified>
+      <Modified>2022-07-17T22:42:23.337</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\mathe\OneDrive\Documentos\GitHub\AutomacaoTEL\AutomaçãoTEL\bin\x86\Debug\Views\Wifi.xbf">
       <PackagePath>Views\Wifi.xbf</PackagePath>
-      <Modified>2022-07-17T10:03:38.604</Modified>
+      <Modified>2022-07-17T22:42:23.336</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Microsoft SDKs\Windows Kits\10\ExtensionSDKs\Microsoft.UniversalCRT.Debug\10.0.17134.0\\redist\Debug\x86\ucrtbased.dll">
       <PackagePath>ucrtbased.dll</PackagePath>
@@ -142,11 +150,11 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\mathe\OneDrive\Documentos\GitHub\AutomacaoTEL\AutomaçãoTEL\bin\x86\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2022-07-16T01:34:54.732</Modified>
+      <Modified>2022-07-17T22:37:07.268</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\mathe\OneDrive\Documentos\GitHub\AutomacaoTEL\AutomaçãoTEL\bin\x86\Debug\Core\AutomaçãoTEL.exe">
       <PackagePath>AutomaçãoTEL.exe</PackagePath>
-      <Modified>2022-07-17T10:03:39.534</Modified>
+      <Modified>2022-07-17T22:42:24.610</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>

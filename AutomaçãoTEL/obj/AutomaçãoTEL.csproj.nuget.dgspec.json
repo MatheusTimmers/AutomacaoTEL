@@ -39,6 +39,10 @@
       "frameworks": {
         "uap10.0.17134": {
           "dependencies": {
+            "FirebirdSql.Data.FirebirdClient": {
+              "target": "Package",
+              "version": "[9.0.2, )"
+            },
             "Microsoft.NETCore.UniversalWindowsPlatform": {
               "target": "Package",
               "version": "[6.2.13, )"

@@ -1,5 +1,10 @@
 ﻿using Newtonsoft.Json;
+using System;
 using System.IO;
+using Windows.Storage;
+using Windows.Storage.Streams;
+using AutomaçãoTEL;
+using System.Data;
 
 namespace AutomaçãoTEL
 {
@@ -9,7 +14,7 @@ namespace AutomaçãoTEL
         public string PasswordUser { get; private set; }
 
 
-        public User(string nameUser,string passwordUser)
+        public User(string nameUser, string passwordUser)
         {
             NameUser = nameUser;
             PasswordUser = passwordUser;
@@ -18,12 +23,10 @@ namespace AutomaçãoTEL
 
         public void CreateUser(object User)
         {
-            string fileName = @"C:\Users\mathe\Downloads\teste.json";
-            string jsonString = JsonConvert.SerializeObject(User);
-            File.WriteAllText(fileName, jsonString);
-        }
+            DataBaseAutentificator autentificator = new DataBaseAutentificator();
+            autentificator.ExecuteManipulation(CommandType.Text, NameUser);
 
-       
+        }
 
     }
 }

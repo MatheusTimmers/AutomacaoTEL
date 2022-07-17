@@ -208,3 +208,5 @@ C:\Users\mathe\OneDrive\Documentos\GitHub\AutomacaoTEL\AutomaçãoTEL\obj\x86\De
 C:\Users\mathe\OneDrive\Documentos\GitHub\AutomacaoTEL\AutomaçãoTEL\obj\x86\Debug\MultipleQualifiersPerDimensionFound.txt
 C:\Users\mathe\OneDrive\Documentos\GitHub\AutomacaoTEL\AutomaçãoTEL\obj\x86\Debug\ProjectArchitectures.txt
 C:\Users\mathe\OneDrive\Documentos\GitHub\AutomacaoTEL\AutomaçãoTEL\bin\x86\Debug\Newtonsoft.Json.dll
+C:\Users\mathe\OneDrive\Documentos\GitHub\AutomacaoTEL\AutomaçãoTEL\bin\x86\Debug\FirebirdSql.Data.FirebirdClient.dll
+C:\Users\mathe\OneDrive\Documentos\GitHub\AutomacaoTEL\AutomaçãoTEL\bin\x86\Debug\System.Runtime.CompilerServices.Unsafe.dll
