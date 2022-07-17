@@ -11,8 +11,8 @@
     Height="650">
 
     <Grid>
-        <TextBlock x:Name="TbRegistration" Text="Cadastro de Usuário" VerticalAlignment="Top" HorizontalAlignment="Center"
-                   FontSize="24" Margin="100"/>
+        <TextBlock x:Name="TbRegistration" Text="Login" VerticalAlignment="Top" HorizontalAlignment="Center"
+                   FontSize="24" Margin="50"/>
         <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center">
             <PersonPicture
             x:Name="personPicture"
@@ -21,18 +21,15 @@
             Height="150">
             </PersonPicture>
             <StackPanel Orientation="Vertical" HorizontalAlignment="Center">
-                <StackPanel Orientation="Horizontal">
-                    <TextBlock x:Name="TbName" Margin="0,5,2,0" Text="Nome:"/>
-                    <TextBox x:Name="TboxName" FontSize="15" Margin="0,0,49,20"  Width="195"/>
-                </StackPanel>
-                <StackPanel Orientation="Horizontal">
-                    <TextBlock x:Name="TbPassword" Margin="0,5,2,0" Text="Senha:"/>
-                    <TextBox x:Name="TboxPassword" FontSize="15" Margin="0,0,49,20"  Width="195"/>
-                </StackPanel>
+                <TextBox x:Name="TboxName" FontSize="15" Margin="10" Width="220" PlaceholderText="Nome"/>
+                <PasswordBox x:Name="TboxPassword" FontSize="15" Margin="10" Width="220" PlaceholderText="Senha" AutomationProperties.Name="Simple PasswordBox"/>
             </StackPanel>
-            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
-                <Button x:Name="BtLogin" Content="Login" Margin="10"/>
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="20">
+                <Button x:Name="BtLogin" Content="Login" Margin="10" Height="35" Width="90" />
+                <Button x:Name="BtRegister" Content="Criar" Margin="10" Height="35" Width="90" Click="BtRegister_Click" />
             </StackPanel>
         </StackPanel>
+        <Frame x:Name="ContentFrame"/>
+
     </Grid>
 </Page>

@@ -13,36 +13,32 @@
             <TextBlock  Text="Automação Bluetooth"
                         VerticalAlignment="Top"
                         HorizontalAlignment="Center"
-                        Margin="0,0,0,0"
+                        Margin="0,0,0,30"
                         FontSize="28"
                         />
-            <TextBlock Text="By Matheus Productions"
-                        VerticalAlignment="Bottom"
-                        HorizontalAlignment="Right"
-                        FontSize="15"
-                        Margin="20,-5,0,0" />
+            <StackPanel Orientation="Vertical">
+                <RelativePanel HorizontalAlignment="Center">
+                    <TextBlock Text="Mhz" RelativePanel.RightOf ="TboxFreqI" Margin="0,9,0,0"/>
+                    <TextBox x:ConnectionId='8' x:Name="TboxFreqI" Margin="5" PlaceholderText="Frequencia Inicial" Width="150"/>
+                    <TextBlock Text="Mhz" RelativePanel.RightOf ="TboxFreqM" RelativePanel.Below="TboxFreqI" Margin="0,9,0,0"/>
+                    <TextBox x:ConnectionId='9' x:Name="TboxFreqM" Margin="5" RelativePanel.Below="TboxFreqI" PlaceholderText="Frequencia do Meio" Width="150" />
+                    <TextBlock Text="Mhz" RelativePanel.RightOf ="TboxFreqF" RelativePanel.Below="TboxFreqM" Margin="0,9,0,0"/>
+                    <TextBox x:ConnectionId='10' x:Name="TboxFreqF" Margin="5" RelativePanel.Below="TboxFreqM" PlaceholderText="Frequencia Final" Width="150"/>
+                </RelativePanel>
+            </StackPanel>
         </StackPanel>
-        <ListView x:ConnectionId='2' x:Name="LVDepartment"  ScrollViewer.VerticalScrollBarVisibility="Auto" VerticalAlignment="Center" HorizontalAlignment="Center" Height="300" Width="350">
-            <CheckBox x:ConnectionId='4' x:Name="OptionsAllCheckBox" Content="Select all"/>
-            <CheckBox x:ConnectionId='5' x:Name="Option1CheckBox"    Content="802.11a" Margin="24,0,0,0" />
-            <CheckBox x:ConnectionId='6' x:Name="Option2CheckBox"    Content="802.11b" Margin="24,0,0,0" />
-            <CheckBox x:ConnectionId='7' x:Name="Option3CheckBox"    Content="802.11g" Margin="24,0,0,0" />
-            <CheckBox x:ConnectionId='8' x:Name="Option4CheckBox"    Content="802.11n (20)" Margin="24,0,0,0"/>
-            <CheckBox x:ConnectionId='9' x:Name="Option5CheckBox"    Content="802.11ac (20)" Margin="24,0,0,0" />
-            <CheckBox x:ConnectionId='10' x:Name="Option6CheckBox"    Content="802.11ax (20)" Margin="24,0,0,0"/>
-            <CheckBox x:ConnectionId='11' x:Name="Option7CheckBox"    Content="802.11n (40)" Margin="24,0,0,0" />
-            <CheckBox x:ConnectionId='12' x:Name="Option8CheckBox"    Content="802.11ac (40)" Margin="24,0,0,0"/>
-            <CheckBox x:ConnectionId='13' x:Name="Option9CheckBox"    Content="802.11ax (40)" Margin="24,0,0,0" />
-            <CheckBox x:ConnectionId='14' x:Name="Option10CheckBox"    Content="802.11n (80)" Margin="24,0,0,0"/>
-            <CheckBox x:ConnectionId='15' x:Name="Option11CheckBox"   Content="802.11ac (80)" Margin="24,0,0,0" />
-            <CheckBox x:ConnectionId='16' x:Name="Option12CheckBox"   Content="802.11ax (80)" Margin="24,0,0,0"/>
-            <CheckBox x:ConnectionId='17' x:Name="Option13CheckBox"   Content="802.11ac (160)" Margin="24,0,0,0"/>
-            <CheckBox x:ConnectionId='18' x:Name="Option14CheckBox"   Content="802.11ax (160)" Margin="24,0,0,0"/>
-        </ListView>
+        <StackPanel VerticalAlignment="Center" Margin="0,80,0,0">
+            <ListView x:ConnectionId='3' x:Name="LvBtModulation"  ScrollViewer.VerticalScrollBarVisibility="Auto" VerticalAlignment="Center" HorizontalAlignment="Center" Height="300" Width="350" Margin="-30,0,0,0">
+                <CheckBox x:ConnectionId='4' x:Name="OptionsAllCheckBox" Content="Select all"/>
+                <CheckBox x:ConnectionId='5' x:Name="Option1CheckBox"    Content="GFSK" Margin="24,0,0,0" />
+                <CheckBox x:ConnectionId='6' x:Name="Option2CheckBox"    Content="pi/4-DQPSK" Margin="24,0,0,0" />
+                <CheckBox x:ConnectionId='7' x:Name="Option3CheckBox"    Content="8DQPSK" Margin="24,0,0,0" />
+            </ListView>
+        </StackPanel>
         <StackPanel VerticalAlignment="Bottom"
                     HorizontalAlignment="Center"
                     Orientation="Vertical">
-            <TextBlock x:ConnectionId='3' x:Name="TbAto237"
+            <TextBlock x:ConnectionId='2' x:Name="TbAto237"
                         Text="Ensaios do Ato 237"
                         FontSize="14"
                         Width="200"

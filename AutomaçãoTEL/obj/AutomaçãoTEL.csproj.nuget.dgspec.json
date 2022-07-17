@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\10088365\\source\\repos\\AutomaçãoTEL\\AutomaçãoTEL\\AutomaçãoTEL.csproj": {}
+    "C:\\Users\\mathe\\OneDrive\\Documentos\\GitHub\\AutomacaoTEL\\AutomaçãoTEL\\AutomaçãoTEL.csproj": {}
   },
   "projects": {
-    "C:\\Users\\10088365\\source\\repos\\AutomaçãoTEL\\AutomaçãoTEL\\AutomaçãoTEL.csproj": {
+    "C:\\Users\\mathe\\OneDrive\\Documentos\\GitHub\\AutomacaoTEL\\AutomaçãoTEL\\AutomaçãoTEL.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\10088365\\source\\repos\\AutomaçãoTEL\\AutomaçãoTEL\\AutomaçãoTEL.csproj",
+        "projectUniqueName": "C:\\Users\\mathe\\OneDrive\\Documentos\\GitHub\\AutomacaoTEL\\AutomaçãoTEL\\AutomaçãoTEL.csproj",
         "projectName": "AutomaçãoTEL",
-        "projectPath": "C:\\Users\\10088365\\source\\repos\\AutomaçãoTEL\\AutomaçãoTEL\\AutomaçãoTEL.csproj",
-        "packagesPath": "C:\\Users\\10088365\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\10088365\\source\\repos\\AutomaçãoTEL\\AutomaçãoTEL\\obj\\",
+        "projectPath": "C:\\Users\\mathe\\OneDrive\\Documentos\\GitHub\\AutomacaoTEL\\AutomaçãoTEL\\AutomaçãoTEL.csproj",
+        "packagesPath": "C:\\Users\\mathe\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\mathe\\OneDrive\\Documentos\\GitHub\\AutomacaoTEL\\AutomaçãoTEL\\obj\\",
         "projectStyle": "PackageReference",
         "skipContentFileWrite": true,
         "fallbackFolders": [
@@ -19,7 +19,7 @@
           "C:\\Program Files (x86)\\Microsoft SDKs\\UWPNuGetPackages\\"
         ],
         "configFilePaths": [
-          "C:\\Users\\10088365\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\mathe\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -46,6 +46,10 @@
             "Microsoft.UI.Xaml": {
               "target": "Package",
               "version": "[2.0.181011001, )"
+            },
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[13.0.1, )"
             },
             "System.ValueTuple": {
               "target": "Package",

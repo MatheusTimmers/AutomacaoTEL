@@ -7,14 +7,26 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}"
-    Height="400"
-    Width="400">
+    Height="650"
+    Width="420">
     
     <Grid>
-        <TextBlock Text="Eu não sei como você chegou aqui, mas saia imediatamente"
+        <StackPanel>
+            <TextBlock Text="Bem Vindo a Automação de TEL"
+                   VerticalAlignment="Top"
+                   Margin="30"
+                   HorizontalAlignment="Center"
+                   FontSize="20"/>
+            <TextBlock Text="By Matheus Productions"
+                        VerticalAlignment="Top"
+                        HorizontalAlignment="Center"
+                        FontSize="15"
+                        Margin="115,-30,0,0" />
+        </StackPanel>
+        <TextBlock Text="Escolha um tipo de ensaio a esquerda"
                    VerticalAlignment="Center"
                    HorizontalAlignment="Center"
-                   FontSize="12"/>
-
+                   FontSize="20"/>
+        
     </Grid>
 </Page>

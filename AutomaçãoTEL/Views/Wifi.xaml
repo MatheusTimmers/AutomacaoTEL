@@ -5,6 +5,7 @@
     xmlns:local="using:AutomaçãoTEL.Views"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:muxc="using:Microsoft.UI.Xaml.Controls"
     mc:Ignorable="d"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}" Width="420" Height="650">
 
@@ -12,36 +13,43 @@
         <StackPanel VerticalAlignment="Top" HorizontalAlignment="Center" Orientation="Vertical">
             <TextBlock  Text="Automação WIFI"
                         VerticalAlignment="Top"
-                        HorizontalAlignment="Center"
-                        Margin="0,0,0,0"
+                        HorizontalAlignment="Center"        
+                        Margin="0,0,0,30"
                         FontSize="28"
                         />
-            <TextBlock Text="By Matheus Productions"
-                        VerticalAlignment="Bottom"
-                        HorizontalAlignment="Right"
-                        FontSize="15"
-                        Margin="20,-5,0,0" />
+            <StackPanel Orientation="Vertical">
+                <RelativePanel HorizontalAlignment="Center">
+                    <TextBlock Text="Mhz" RelativePanel.RightOf ="TboxFreqI" Margin="0,9,0,0"/>
+                    <TextBox x:Name="TboxFreqI" Margin="5" PlaceholderText="Frequencia Inicial" Width="150"/>
+                    <TextBlock Text="Mhz" RelativePanel.RightOf ="TboxFreqM" RelativePanel.Below="TboxFreqI" Margin="0,9,0,0"/>
+                    <TextBox x:Name="TboxFreqM" Margin="5" RelativePanel.Below="TboxFreqI" PlaceholderText="Frequencia do Meio" Width="150" />
+                    <TextBlock Text="Mhz" RelativePanel.RightOf ="TboxFreqF" RelativePanel.Below="TboxFreqM" Margin="0,9,0,0"/>
+                    <TextBox x:Name="TboxFreqF" Margin="5" RelativePanel.Below="TboxFreqM" PlaceholderText="Frequencia Final" Width="150"/>
+                </RelativePanel>
+            </StackPanel>
         </StackPanel>
-        <StackPanel>
-            
+       
+        <StackPanel VerticalAlignment="Center" Margin="0,80,0,0">
+            <ListView x:Name="LvWifiModulation" ScrollViewer.VerticalScrollBarVisibility="Auto" VerticalAlignment="Center" HorizontalAlignment="Center" Height="300" Width="350" Margin="-30,0,0,0">
+                <CheckBox x:Name="OptionsAllCheckBox" Content="Selecionar Todos" IsThreeState="True"
+                          Checked="SelectAll_Checked" Unchecked="SelectAll_Unchecked"
+                          Indeterminate="SelectAll_Indeterminate"/>
+                <CheckBox x:Name="Option1CheckBox"    Content="802.11a" Margin="24,0,0,0" Checked="Option_Checked" Unchecked="Option_Unchecked"/>
+                <CheckBox x:Name="Option2CheckBox"    Content="802.11b" Margin="24,0,0,0" Checked="Option_Checked" Unchecked="Option_Unchecked"/>
+                <CheckBox x:Name="Option3CheckBox"    Content="802.11g" Margin="24,0,0,0" Checked="Option_Checked" Unchecked="Option_Unchecked"/>
+                <CheckBox x:Name="Option4CheckBox"    Content="802.11n (20)" Margin="24,0,0,0" Checked="Option_Checked" Unchecked="Option_Unchecked"/>
+                <CheckBox x:Name="Option5CheckBox"    Content="802.11ac (20)" Margin="24,0,0,0" Checked="Option_Checked" Unchecked="Option_Unchecked"/>
+                <CheckBox x:Name="Option6CheckBox"    Content="802.11ax (20)" Margin="24,0,0,0" Checked="Option_Checked" Unchecked="Option_Unchecked"/>
+                <CheckBox x:Name="Option7CheckBox"    Content="802.11n (40)" Margin="24,0,0,0" Checked="Option_Checked" Unchecked="Option_Unchecked"/>
+                <CheckBox x:Name="Option8CheckBox"    Content="802.11ac (40)" Margin="24,0,0,0" Checked="Option_Checked" Unchecked="Option_Unchecked"/>
+                <CheckBox x:Name="Option9CheckBox"    Content="802.11ax (40)" Margin="24,0,0,0" Checked="Option_Checked" Unchecked="Option_Unchecked"/>
+                <CheckBox x:Name="Option10CheckBox"    Content="802.11n (80)" Margin="24,0,0,0" Checked="Option_Checked" Unchecked="Option_Unchecked"/>
+                <CheckBox x:Name="Option11CheckBox"   Content="802.11ac (80)" Margin="24,0,0,0" Checked="Option_Checked" Unchecked="Option_Unchecked"/>
+                <CheckBox x:Name="Option12CheckBox"   Content="802.11ax (80)" Margin="24,0,0,0" Checked="Option_Checked" Unchecked="Option_Unchecked"/>
+                <CheckBox x:Name="Option13CheckBox"   Content="802.11ac (160)" Margin="24,0,0,0" Checked="Option_Checked" Unchecked="Option_Unchecked"/>
+                <CheckBox x:Name="Option14CheckBox"   Content="802.11ax (160)" Margin="24,0,0,0" Checked="Option_Checked" Unchecked="Option_Unchecked"/>
+            </ListView>
         </StackPanel>
-        <ListView x:Name="LVDepartment"  ScrollViewer.VerticalScrollBarVisibility="Auto" VerticalAlignment="Center" HorizontalAlignment="Center" Height="300" Width="350" Margin="-30,0,0,0">
-            <CheckBox x:Name="OptionsAllCheckBox" Content="Select all"/>
-            <CheckBox x:Name="Option1CheckBox"    Content="802.11a" Margin="24,0,0,0" />
-            <CheckBox x:Name="Option2CheckBox"    Content="802.11b" Margin="24,0,0,0" />
-            <CheckBox x:Name="Option3CheckBox"    Content="802.11g" Margin="24,0,0,0" />
-            <CheckBox x:Name="Option4CheckBox"    Content="802.11n (20)" Margin="24,0,0,0"/>
-            <CheckBox x:Name="Option5CheckBox"    Content="802.11ac (20)" Margin="24,0,0,0" />
-            <CheckBox x:Name="Option6CheckBox"    Content="802.11ax (20)" Margin="24,0,0,0"/>
-            <CheckBox x:Name="Option7CheckBox"    Content="802.11n (40)" Margin="24,0,0,0" />
-            <CheckBox x:Name="Option8CheckBox"    Content="802.11ac (40)" Margin="24,0,0,0"/>
-            <CheckBox x:Name="Option9CheckBox"    Content="802.11ax (40)" Margin="24,0,0,0" />
-            <CheckBox x:Name="Option10CheckBox"    Content="802.11n (80)" Margin="24,0,0,0"/>
-            <CheckBox x:Name="Option11CheckBox"   Content="802.11ac (80)" Margin="24,0,0,0" />
-            <CheckBox x:Name="Option12CheckBox"   Content="802.11ax (80)" Margin="24,0,0,0"/>
-            <CheckBox x:Name="Option13CheckBox"   Content="802.11ac (160)" Margin="24,0,0,0"/>
-            <CheckBox x:Name="Option14CheckBox"   Content="802.11ax (160)" Margin="24,0,0,0"/>
-        </ListView>
         <StackPanel VerticalAlignment="Bottom"
                     HorizontalAlignment="Center"
                     Orientation="Vertical">
@@ -56,25 +64,27 @@
             <StackPanel VerticalAlignment="Bottom"
                         HorizontalAlignment="Center" 
                         Orientation="Horizontal" Margin="0,0,0,60">
-                <Button Content="Item 10"
+                <Button x:Name="Item10Bt"
+                    Content="Item 10"
                     Width="110" 
                     Height="30" 
                     HorizontalAlignment="Left"
                     VerticalAlignment="Bottom"
                     Margin="0,5,5,5"/>
-                <Button Content="Item 11"
+                <Button x:Name="Item11Bt"
+                    Content="Item 11"
                     Width="110" 
                     Height="30"  
                     HorizontalAlignment="Right"
                     VerticalAlignment="Bottom"
-                    Margin="5" 
-                    />
-                <Button Content="Item 12"
+                    Margin="5"/>
+                <Button x:Name="Item12Bt"
+                    Content="Item 12"
                     Width="110" 
                     Height="30"  
                     HorizontalAlignment="Right"
                     VerticalAlignment="Bottom"
-                    Margin="5,5,0,5" />
+                    Margin="5,5,0,5"/>
             </StackPanel>
             <Button Content="Confirmar"
                 Width="110"

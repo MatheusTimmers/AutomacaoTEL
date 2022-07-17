@@ -213,7 +213,7 @@ namespace AutomaçãoTEL.AutomaçãoTEL_XamlTypeInfo
 
         private void InitTypeTables()
         {
-            _typeNameTable = new string[44];
+            _typeNameTable = new string[45];
             _typeNameTable[0] = "Windows.UI.Color";
             _typeNameTable[1] = "System.ValueType";
             _typeNameTable[2] = "Object";
@@ -250,16 +250,17 @@ namespace AutomaçãoTEL.AutomaçãoTEL_XamlTypeInfo
             _typeNameTable[33] = "AutomaçãoTEL.MainPage";
             _typeNameTable[34] = "Windows.UI.Xaml.Controls.Page";
             _typeNameTable[35] = "Windows.UI.Xaml.Controls.UserControl";
-            _typeNameTable[36] = "AutomaçãoTEL.Views.RegistrationAccount";
-            _typeNameTable[37] = "AutomaçãoTEL.Views.Bluetooth";
-            _typeNameTable[38] = "AutomaçãoTEL.Views.Config";
-            _typeNameTable[39] = "AutomaçãoTEL.Views.Home";
-            _typeNameTable[40] = "AutomaçãoTEL.Views.Wifi";
-            _typeNameTable[41] = "Microsoft.UI.Xaml.Controls.TreeViewNode";
-            _typeNameTable[42] = "System.Collections.Generic.IList`1<Microsoft.UI.Xaml.Controls.TreeViewNode>";
-            _typeNameTable[43] = "Int32";
+            _typeNameTable[36] = "AutomaçãoTEL.Views.Login";
+            _typeNameTable[37] = "AutomaçãoTEL.Views.RegistrationAccount";
+            _typeNameTable[38] = "AutomaçãoTEL.Views.Bluetooth";
+            _typeNameTable[39] = "AutomaçãoTEL.Views.Config";
+            _typeNameTable[40] = "AutomaçãoTEL.Views.Home";
+            _typeNameTable[41] = "AutomaçãoTEL.Views.Wifi";
+            _typeNameTable[42] = "Microsoft.UI.Xaml.Controls.TreeViewNode";
+            _typeNameTable[43] = "System.Collections.Generic.IList`1<Microsoft.UI.Xaml.Controls.TreeViewNode>";
+            _typeNameTable[44] = "Int32";
 
-            _typeTable = new global::System.Type[44];
+            _typeTable = new global::System.Type[45];
             _typeTable[0] = typeof(global::Windows.UI.Color);
             _typeTable[1] = typeof(global::System.ValueType);
             _typeTable[2] = typeof(global::System.Object);
@@ -296,14 +297,15 @@ namespace AutomaçãoTEL.AutomaçãoTEL_XamlTypeInfo
             _typeTable[33] = typeof(global::AutomaçãoTEL.MainPage);
             _typeTable[34] = typeof(global::Windows.UI.Xaml.Controls.Page);
             _typeTable[35] = typeof(global::Windows.UI.Xaml.Controls.UserControl);
-            _typeTable[36] = typeof(global::AutomaçãoTEL.Views.RegistrationAccount);
-            _typeTable[37] = typeof(global::AutomaçãoTEL.Views.Bluetooth);
-            _typeTable[38] = typeof(global::AutomaçãoTEL.Views.Config);
-            _typeTable[39] = typeof(global::AutomaçãoTEL.Views.Home);
-            _typeTable[40] = typeof(global::AutomaçãoTEL.Views.Wifi);
-            _typeTable[41] = typeof(global::Microsoft.UI.Xaml.Controls.TreeViewNode);
-            _typeTable[42] = typeof(global::System.Collections.Generic.IList<global::Microsoft.UI.Xaml.Controls.TreeViewNode>);
-            _typeTable[43] = typeof(global::System.Int32);
+            _typeTable[36] = typeof(global::AutomaçãoTEL.Views.Login);
+            _typeTable[37] = typeof(global::AutomaçãoTEL.Views.RegistrationAccount);
+            _typeTable[38] = typeof(global::AutomaçãoTEL.Views.Bluetooth);
+            _typeTable[39] = typeof(global::AutomaçãoTEL.Views.Config);
+            _typeTable[40] = typeof(global::AutomaçãoTEL.Views.Home);
+            _typeTable[41] = typeof(global::AutomaçãoTEL.Views.Wifi);
+            _typeTable[42] = typeof(global::Microsoft.UI.Xaml.Controls.TreeViewNode);
+            _typeTable[43] = typeof(global::System.Collections.Generic.IList<global::Microsoft.UI.Xaml.Controls.TreeViewNode>);
+            _typeTable[44] = typeof(global::System.Int32);
         }
 
         private int LookupTypeIndexByName(string typeName)
@@ -345,12 +347,13 @@ namespace AutomaçãoTEL.AutomaçãoTEL_XamlTypeInfo
         private object Activate_31_NavigationViewItemSeparator() { return new global::Microsoft.UI.Xaml.Controls.NavigationViewItemSeparator(); }
         private object Activate_32_NavigationViewItemHeader() { return new global::Microsoft.UI.Xaml.Controls.NavigationViewItemHeader(); }
         private object Activate_33_MainPage() { return new global::AutomaçãoTEL.MainPage(); }
-        private object Activate_36_RegistrationAccount() { return new global::AutomaçãoTEL.Views.RegistrationAccount(); }
-        private object Activate_37_Bluetooth() { return new global::AutomaçãoTEL.Views.Bluetooth(); }
-        private object Activate_38_Config() { return new global::AutomaçãoTEL.Views.Config(); }
-        private object Activate_39_Home() { return new global::AutomaçãoTEL.Views.Home(); }
-        private object Activate_40_Wifi() { return new global::AutomaçãoTEL.Views.Wifi(); }
-        private object Activate_41_TreeViewNode() { return new global::Microsoft.UI.Xaml.Controls.TreeViewNode(); }
+        private object Activate_36_Login() { return new global::AutomaçãoTEL.Views.Login(); }
+        private object Activate_37_RegistrationAccount() { return new global::AutomaçãoTEL.Views.RegistrationAccount(); }
+        private object Activate_38_Bluetooth() { return new global::AutomaçãoTEL.Views.Bluetooth(); }
+        private object Activate_39_Config() { return new global::AutomaçãoTEL.Views.Config(); }
+        private object Activate_40_Home() { return new global::AutomaçãoTEL.Views.Home(); }
+        private object Activate_41_Wifi() { return new global::AutomaçãoTEL.Views.Wifi(); }
+        private object Activate_42_TreeViewNode() { return new global::Microsoft.UI.Xaml.Controls.TreeViewNode(); }
         private void MapAdd_4_XamlControlsResources(object instance, object key, object item)
         {
             var collection = (global::System.Collections.Generic.IDictionary<global::System.Object, global::System.Object>)instance;
@@ -364,7 +367,7 @@ namespace AutomaçãoTEL.AutomaçãoTEL_XamlTypeInfo
             var newItem = (global::System.Object)item;
             collection.Add(newItem);
         }
-        private void VectorAdd_42_IList(object instance, object item)
+        private void VectorAdd_43_IList(object instance, object item)
         {
             var collection = (global::System.Collections.Generic.ICollection<global::Microsoft.UI.Xaml.Controls.TreeViewNode>)instance;
             var newItem = (global::Microsoft.UI.Xaml.Controls.TreeViewNode)item;
@@ -615,44 +618,51 @@ namespace AutomaçãoTEL.AutomaçãoTEL_XamlTypeInfo
                 xamlType = new global::AutomaçãoTEL.AutomaçãoTEL_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
 
-            case 36:   //  AutomaçãoTEL.Views.RegistrationAccount
+            case 36:   //  AutomaçãoTEL.Views.Login
                 userType = new global::AutomaçãoTEL.AutomaçãoTEL_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_36_RegistrationAccount;
+                userType.Activator = Activate_36_Login;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 37:   //  AutomaçãoTEL.Views.Bluetooth
+            case 37:   //  AutomaçãoTEL.Views.RegistrationAccount
                 userType = new global::AutomaçãoTEL.AutomaçãoTEL_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_37_Bluetooth;
+                userType.Activator = Activate_37_RegistrationAccount;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 38:   //  AutomaçãoTEL.Views.Config
+            case 38:   //  AutomaçãoTEL.Views.Bluetooth
                 userType = new global::AutomaçãoTEL.AutomaçãoTEL_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_38_Config;
+                userType.Activator = Activate_38_Bluetooth;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 39:   //  AutomaçãoTEL.Views.Home
+            case 39:   //  AutomaçãoTEL.Views.Config
                 userType = new global::AutomaçãoTEL.AutomaçãoTEL_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_39_Home;
+                userType.Activator = Activate_39_Config;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 40:   //  AutomaçãoTEL.Views.Wifi
+            case 40:   //  AutomaçãoTEL.Views.Home
                 userType = new global::AutomaçãoTEL.AutomaçãoTEL_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_40_Wifi;
+                userType.Activator = Activate_40_Home;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 41:   //  Microsoft.UI.Xaml.Controls.TreeViewNode
+            case 41:   //  AutomaçãoTEL.Views.Wifi
+                userType = new global::AutomaçãoTEL.AutomaçãoTEL_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
+                userType.Activator = Activate_41_Wifi;
+                userType.SetIsLocalType();
+                xamlType = userType;
+                break;
+
+            case 42:   //  Microsoft.UI.Xaml.Controls.TreeViewNode
                 userType = new global::AutomaçãoTEL.AutomaçãoTEL_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.DependencyObject"));
-                userType.Activator = Activate_41_TreeViewNode;
+                userType.Activator = Activate_42_TreeViewNode;
                 userType.AddMemberName("IsExpanded");
                 userType.AddMemberName("HasUnrealizedChildren");
                 userType.AddMemberName("Content");
@@ -664,14 +674,14 @@ namespace AutomaçãoTEL.AutomaçãoTEL_XamlTypeInfo
                 xamlType = userType;
                 break;
 
-            case 42:   //  System.Collections.Generic.IList`1<Microsoft.UI.Xaml.Controls.TreeViewNode>
+            case 43:   //  System.Collections.Generic.IList`1<Microsoft.UI.Xaml.Controls.TreeViewNode>
                 userType = new global::AutomaçãoTEL.AutomaçãoTEL_XamlTypeInfo.XamlUserType(this, typeName, type, null);
-                userType.CollectionAdd = VectorAdd_42_IList;
+                userType.CollectionAdd = VectorAdd_43_IList;
                 userType.SetIsReturnTypeStub();
                 xamlType = userType;
                 break;
 
-            case 43:   //  Int32
+            case 44:   //  Int32
                 xamlType = new global::AutomaçãoTEL.AutomaçãoTEL_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
             }

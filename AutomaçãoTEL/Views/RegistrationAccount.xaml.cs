@@ -14,8 +14,7 @@ using Windows.Storage;
 using Windows.Storage.Streams;
 using Windows.Graphics.Imaging;
 using Windows.UI.Xaml.Media.Imaging;
-using Windows.System;
-using System.Threading.Tasks;
+using AutomaçãoTEL;
 
 
 
@@ -28,6 +27,9 @@ namespace AutomaçãoTEL.Views
     /// </summary>
     public sealed partial class RegistrationAccount : Page
     {
+
+
+
         public RegistrationAccount()
         {
             this.InitializeComponent();
@@ -59,6 +61,32 @@ namespace AutomaçãoTEL.Views
             await bitmapSource.SetBitmapAsync(softwareBitmapBGR8);
 
             personPicture.ProfilePicture = bitmapSource;
+        }
+
+        private void BtRegister_Click(object sender, RoutedEventArgs e)
+        {
+            if (TboxName.Text == "" || TboxPassword.Password == "")
+            {
+                DisplayMissNamorePassword();
+                return;
+            }
+            User newUser = new User(TboxName.Text, TboxPassword.Password);
+            newUser.CreateUser(newUser);
+
+        }
+
+
+
+        private async void DisplayMissNamorePassword()
+        {
+            ContentDialog noWifiDialog = new ContentDialog
+            {
+                Title = "Nome ou senha inválidos",
+                Content = "Verifique o nome ou a senha e tente novamente",
+                CloseButtonText = "Ok"
+            };
+
+            ContentDialogResult result = await noWifiDialog.ShowAsync();
         }
     }
 }
