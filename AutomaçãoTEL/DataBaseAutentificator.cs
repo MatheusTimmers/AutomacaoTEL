@@ -12,7 +12,7 @@ namespace AutomaçãoTEL
     {
         private FbConnection CreateConnection()
         {
-            return new FbConnection("User=SYSDBA;Password=pafuncio;Database=AUTOMACAOTEL.fdb;DataSource=localhost;Port=3050;Dialect=3;Charset=NONE;Role=;Connection lifetime=15;Pooling=true;MinPoolSize=0;MaxPoolSize=50;PacketSize=8192;ServerType=0;");
+            return new FbConnection("User=SYSDBA;Password=pafuncio;Database=C:\\Users\\mathe\\OneDrive\\Documentos\\GitHub\\AutomacaoTEL\\BancoDeDados\\AUTOMACAOTEL.fdb;DataSource=localhost;Port=3050;Dialect=3;Charset=NONE;Role=;Connection lifetime=15;Pooling=true;MinPoolSize=0;MaxPoolSize=50;Packet Size=8192;ServerType=0;");
         }
 
         private FbParameterCollection sqlParameterCollection = new FbCommand().Parameters;
