@@ -9,6 +9,7 @@ using Windows.Storage.Streams;
 using Windows.Graphics.Imaging;
 using Windows.UI.Xaml.Media.Imaging;
 using FirebirdSql.Data.FirebirdClient;
+using AutomaçãoTEL.UserPaste;
 
 
 

@@ -8,7 +8,7 @@ using System.Data;
 using System.Security.Cryptography;
 using System.Text;
 
-namespace AutomaçãoTEL
+namespace AutomaçãoTEL.UserPaste
 {
     public class User
     {
@@ -51,6 +51,7 @@ namespace AutomaçãoTEL
             DataBaseAutentificator autentificator = new DataBaseAutentificator();
             autentificator.ExecuteManipulation(CommandType.Text, $"SELECT NAME, NAME" +
                                                                  $"WHERE NAME = '{NameUser}' AND USERPASSWORD = '{PasswordUser}');");
+            return true;
         }
 
 
