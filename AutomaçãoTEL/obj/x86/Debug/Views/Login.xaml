@@ -29,7 +29,8 @@
                 <Button x:ConnectionId='6' x:Name="BtRegister" Content="Criar" Margin="10" Height="35" Width="90"                          />
             </StackPanel>
         </StackPanel>
-        <Frame x:ConnectionId='3' x:Name="ContentFrame"/>
+        <Frame x:ConnectionId='3' x:Name="ContentFrame"                                                  
+                   />
 
     </Grid>
 </Page>

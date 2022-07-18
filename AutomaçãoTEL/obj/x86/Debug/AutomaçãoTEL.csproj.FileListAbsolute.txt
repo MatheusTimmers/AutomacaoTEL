@@ -210,3 +210,6 @@ C:\Users\mathe\OneDrive\Documentos\GitHub\AutomacaoTEL\AutomaçãoTEL\obj\x86\De
 C:\Users\mathe\OneDrive\Documentos\GitHub\AutomacaoTEL\AutomaçãoTEL\bin\x86\Debug\Newtonsoft.Json.dll
 C:\Users\mathe\OneDrive\Documentos\GitHub\AutomacaoTEL\AutomaçãoTEL\bin\x86\Debug\FirebirdSql.Data.FirebirdClient.dll
 C:\Users\mathe\OneDrive\Documentos\GitHub\AutomacaoTEL\AutomaçãoTEL\bin\x86\Debug\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\10088365\source\repos\AutomaçãoTEL\AutomaçãoTEL\bin\x86\Debug\FirebirdSql.Data.FirebirdClient.dll
+C:\Users\10088365\source\repos\AutomaçãoTEL\AutomaçãoTEL\bin\x86\Debug\Newtonsoft.Json.dll
+C:\Users\10088365\source\repos\AutomaçãoTEL\AutomaçãoTEL\bin\x86\Debug\System.Runtime.CompilerServices.Unsafe.dll

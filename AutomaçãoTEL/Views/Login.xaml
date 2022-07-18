@@ -29,7 +29,8 @@
                 <Button x:Name="BtRegister" Content="Criar" Margin="10" Height="35" Width="90" Click="BtRegister_Click" />
             </StackPanel>
         </StackPanel>
-        <Frame x:Name="ContentFrame"/>
+        <Frame x:Name="ContentFrame" NavigationFailed="ContentFrame_NavigationFailed" 
+                   />
 
     </Grid>
 </Page>

@@ -12,7 +12,7 @@ namespace AutomaçãoTEL
     {
         private FbConnection CreateConnection()
         {
-            return new FbConnection("User=SYSDBA;Password=pafuncio;Database=C:\\Users\\mathe\\OneDrive\\Documentos\\GitHub\\AutomacaoTEL\\BancoDeDados\\AUTOMACAOTEL.fdb;DataSource=localhost;Port=3050;Dialect=3;Charset=NONE;Role=;Connection lifetime=15;Pooling=true;MinPoolSize=0;MaxPoolSize=50;Packet Size=8192;ServerType=0;");
+            return new FbConnection("User=SYSDBA;Password=pafuncio;Database=C:\\Users\\10088365\\source\\repos\\AutomaçãoTEL\\BancoDeDados\\AUTOMACAOTEL.fdb;DataSource=localhost;Port=3050;Dialect=3;Charset=NONE;Role=;Connection lifetime=15;Pooling=true;MinPoolSize=0;MaxPoolSize=50;Packet Size=8192;ServerType=0;");
         }
 
         private FbParameterCollection sqlParameterCollection = new FbCommand().Parameters;
@@ -27,9 +27,10 @@ namespace AutomaçãoTEL
             try
             {
                 FbConnection sqlConnection = CreateConnection();
-
-
                 sqlConnection.Open();
+
+                var transaction = sqlConnection.BeginTransaction();
+
 
                 FbCommand sqlCommand = sqlConnection.CreateCommand();
                 sqlCommand.CommandType = commandType;
@@ -40,6 +41,9 @@ namespace AutomaçãoTEL
                 {
                     sqlCommand.Parameters.Add(new FbParameter(sqlParameter.ParameterName, sqlParameter.Value));
                 }
+
+                transaction.Commit();
+
                 return sqlCommand.ExecuteScalar();
 
             }
