@@ -1,7 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Data;
+using System.IO;
 using System.Linq;
+using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 using FirebirdSql.Data.FirebirdClient;
@@ -12,7 +14,11 @@ namespace AutomaçãoTEL
     {
         private FbConnection CreateConnection()
         {
-            return new FbConnection("User=SYSDBA;Password=pafuncio;Database=C:\\Users\\10088365\\source\\repos\\AutomaçãoTEL\\BancoDeDados\\AUTOMACAOTEL.fdb;DataSource=localhost;Port=3050;Dialect=3;Charset=NONE;Role=;Connection lifetime=15;Pooling=true;MinPoolSize=0;MaxPoolSize=50;Packet Size=8192;ServerType=0;");
+            var dir = Directory.GetCurrentDirectory();
+            if (dir == null)
+                return null;
+            dir = Path.Combine(dir, "entrypoint\\BancoDeDados\\AUTOMACAOTEL.fdb");
+            return new FbConnection($"User=SYSDBA;Password=pafuncio;Database={dir};DataSource=localhost;Port=3050;Dialect=3;Charset=NONE;Role=;Connection lifetime=15;Pooling=true;MinPoolSize=0;MaxPoolSize=50;Packet Size=8192;ServerType=0;");
         }
 
         private FbParameterCollection sqlParameterCollection = new FbCommand().Parameters;
