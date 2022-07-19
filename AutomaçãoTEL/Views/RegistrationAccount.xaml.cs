@@ -40,7 +40,6 @@ namespace AutomaçãoTEL.Views
 
             if (photo == null)
             {
-                // User cancelled photo capture
                 return;
             }
 
@@ -60,6 +59,7 @@ namespace AutomaçãoTEL.Views
 
         private void BtRegister_Click(object sender, RoutedEventArgs e)
         {
+            //CRIAR ALGORTIMO DE BUSCA DE USUARIO JA CADASTRADO
             if (TboxName.Text == "" || TboxPassword.Password == "")
             {
                 DisplayMissNamorePassword();
@@ -80,8 +80,7 @@ namespace AutomaçãoTEL.Views
                 Content = "Verifique o nome ou a senha e tente novamente",
                 CloseButtonText = "Ok"
             };
-
-            ContentDialogResult result = await noWifiDialog.ShowAsync();
+            _ = await noWifiDialog.ShowAsync();
         }
     }
 }

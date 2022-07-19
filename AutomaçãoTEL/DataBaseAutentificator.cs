@@ -28,69 +28,95 @@ namespace AutomaçãoTEL
             sqlParameterCollection.Add(new FbParameter(nameParameter, valueParameter));
         }
 
-        public Object ExecuteManipulation(CommandType commandType, string nameStoredProcedureOrTextSql) 
+        public void ExecuteCommand(CommandType commandType, string nameStoredProcedureOrTextSql) 
         {
-            try
+            using (FbConnection sqlConnection = CreateConnection())
             {
-                FbConnection sqlConnection = CreateConnection();
-                sqlConnection.Open();
 
-                var transaction = sqlConnection.BeginTransaction();
+                if (sqlConnection.State == ConnectionState.Closed)
+                    sqlConnection.Open();
+                FbTransaction OrderTrans = sqlConnection.BeginTransaction();
 
-
-                FbCommand sqlCommand = sqlConnection.CreateCommand();
-                sqlCommand.CommandType = commandType;
-                sqlCommand.CommandText = nameStoredProcedureOrTextSql;
-                sqlCommand.CommandTimeout = 500;
-
-                foreach (FbParameter sqlParameter in sqlParameterCollection)
+                FbCommand cmd = new FbCommand();
+                cmd.Connection = sqlConnection;
+                cmd.Transaction = OrderTrans;
+                try
                 {
-                    sqlCommand.Parameters.Add(new FbParameter(sqlParameter.ParameterName, sqlParameter.Value));
+                    cmd = sqlConnection.CreateCommand();
+                    cmd.CommandType = commandType;
+                    cmd.CommandText = nameStoredProcedureOrTextSql;
+                    cmd.CommandTimeout = 500;
+
+                    OrderTrans.Commit();
+
+                    cmd.ExecuteScalar(); ;
+
                 }
+                catch (Exception e)
+                {
 
-                transaction.Commit();
-
-                return sqlCommand.ExecuteScalar();
-
-            }
-            catch (Exception e)
-            {
-
-                throw new Exception(e.Message);
+                    throw new Exception(e.Message);
+                }
+                finally
+                {
+                    cmd.Dispose();
+                    OrderTrans.Dispose();
+                    sqlConnection.Close();
+                }
             }
         }
 
         public DataTable ExecuteQuery(CommandType commandType, string nameStoredProcedureOrTextSql)
         {
-
-            try
+            using (FbConnection sqlConnection = CreateConnection())
             {
-                FbConnection sqlConnection = CreateConnection();
-                sqlConnection.Open();
 
-                FbCommand sqlCommand = sqlConnection.CreateCommand();
-                sqlCommand.CommandType = commandType;
-                sqlCommand.CommandText = nameStoredProcedureOrTextSql;
-                sqlCommand.CommandTimeout = 500;
+                if (sqlConnection.State == ConnectionState.Closed)
+                    sqlConnection.Open();
+                FbTransaction OrderTrans = sqlConnection.BeginTransaction();
 
-
-                foreach (FbParameter sqlParameter in sqlParameterCollection)
+                FbCommand cmd = new FbCommand();
+                cmd.Connection = sqlConnection;
+                cmd.Transaction = OrderTrans;
+                try
                 {
-                    sqlCommand.Parameters.Add(new FbParameter(sqlParameter.ParameterName, sqlParameter.Value));
+
+                    cmd = sqlConnection.CreateCommand();
+                    cmd.CommandType = commandType;
+                    cmd.CommandText = nameStoredProcedureOrTextSql;
+                    cmd.CommandTimeout = 500;
+
+
+                    foreach (FbParameter sqlParameter in sqlParameterCollection)
+                    {
+                        cmd.Parameters.Add(new FbParameter(sqlParameter.ParameterName, sqlParameter.Value));
+                    }
+
+                    OrderTrans.Commit();
+
+                    FbDataReader reader = cmd.ExecuteReader();
+
+                    DataTable dataTable = new DataTable();
+                    dataTable = GetTable(reader);
+
+
+                    return dataTable;
+                }
+                catch (Exception e)
+                {
+                    OrderTrans.Rollback();
+                    throw new Exception(e.Message);
+                }
+                finally
+                {
+                    cmd.Dispose();
+                    OrderTrans.Dispose();
+                    sqlConnection.Close();
                 }
 
-                FbDataReader reader = sqlCommand.ExecuteReader();
-
-                DataTable dataTable = new DataTable();
-                dataTable = GetTable(reader);
-
-                return dataTable;
             }
-            catch (Exception e)
-            {
+            
 
-                throw new Exception(e.Message);
-            }
 
         }
 

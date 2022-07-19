@@ -3,6 +3,7 @@ using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Media.Animation;
 using Windows.UI.Xaml.Navigation;
+using AutomaçãoTEL.UserFolder;
 
 
 
@@ -27,5 +28,38 @@ namespace AutomaçãoTEL.Views
         {
             throw new Exception("Failed to load Page " + e.SourcePageType.FullName);
         }
+
+        private void BtLogin_Click(object sender, RoutedEventArgs e)
+        {
+            User user = new User(TboxName.Text, TboxPassword.Password);
+            if (!user.Login(user))
+            {
+                DisplayInvalidNameOrPassword();
+                return;
+            }
+            LoginPerformed();
+        }
+
+        private async void DisplayInvalidNameOrPassword()
+        {
+            ContentDialog noWifiDialog = new ContentDialog
+            {
+                Title = "Nome ou senha inválidos",
+                Content = "Verifique o nome ou a senha e tente novamente",
+                CloseButtonText = "Ok"
+            };
+            _ = await noWifiDialog.ShowAsync();
+        }
+
+        private async void LoginPerformed()
+        {
+            ContentDialog noWifiDialog = new ContentDialog
+            {
+                Title = "Login Efetuado",
+                CloseButtonText = "Ok"
+            };
+            _ = await noWifiDialog.ShowAsync();
+        }
+
     }
 }

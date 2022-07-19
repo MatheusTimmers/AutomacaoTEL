@@ -25,7 +25,7 @@
                 <PasswordBox x:ConnectionId='8' x:Name="TboxPassword" FontSize="15" Margin="10" Width="220" PlaceholderText="Senha" AutomationProperties.Name="Simple PasswordBox"/>
             </StackPanel>
             <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="20">
-                <Button x:ConnectionId='5' x:Name="BtLogin" Content="Login" Margin="10" Height="35" Width="90" />
+                <Button x:ConnectionId='5' x:Name="BtLogin" Content="Login" Margin="10" Height="35" Width="90"                      />
                 <Button x:ConnectionId='6' x:Name="BtRegister" Content="Criar" Margin="10" Height="35" Width="90"                          />
             </StackPanel>
         </StackPanel>

@@ -42,16 +42,21 @@ namespace AutomaçãoTEL.UserFolder
         public void CreateUser(object User)
         {
             DataBaseAutentificator autentificator = new DataBaseAutentificator();
-            autentificator.ExecuteManipulation(CommandType.Text, $"INSERT INTO UserData(NAME, USERPASSWORD)" +
+            autentificator.ExecuteCommand(CommandType.Text, $"INSERT INTO UserData(NAME, USERPASSWORD)" +
                                                                  $"VALUES ('{NameUser}','{PasswordUser}');");
         }
 
         public bool Login(Object User)
         {
             DataBaseAutentificator autentificator = new DataBaseAutentificator();
-            autentificator.ExecuteManipulation(CommandType.Text, $"SELECT NAME, NAME" +
-                                                                 $"WHERE NAME = '{NameUser}' AND USERPASSWORD = '{PasswordUser}');");
-            return true;
+            var query = autentificator.ExecuteQuery(CommandType.Text, $"SELECT NAME, USERPASSWORD FROM UserData" +
+                                                                $" WHERE NAME = '{NameUser}' AND USERPASSWORD = '{PasswordUser}';");
+            if (query.Rows.Count == 0)
+            {
+                return false;
+            }
+            return true;     
+            
         }
 
 
