@@ -19,20 +19,20 @@
             <StackPanel Orientation="Vertical">
                 <RelativePanel HorizontalAlignment="Center">
                     <TextBlock Text="Mhz" RelativePanel.RightOf ="TboxFreqI" Margin="0,9,0,0"/>
-                    <TextBox x:ConnectionId='8' x:Name="TboxFreqI" Margin="5" PlaceholderText="Frequencia Inicial" Width="150"/>
+                    <TextBox x:ConnectionId='9' x:Name="TboxFreqI" Margin="5" PlaceholderText="Frequencia Inicial" Width="150"/>
                     <TextBlock Text="Mhz" RelativePanel.RightOf ="TboxFreqM" RelativePanel.Below="TboxFreqI" Margin="0,9,0,0"/>
-                    <TextBox x:ConnectionId='9' x:Name="TboxFreqM" Margin="5" RelativePanel.Below="TboxFreqI" PlaceholderText="Frequencia do Meio" Width="150" />
+                    <TextBox x:ConnectionId='10' x:Name="TboxFreqM" Margin="5" RelativePanel.Below="TboxFreqI" PlaceholderText="Frequencia do Meio" Width="150" />
                     <TextBlock Text="Mhz" RelativePanel.RightOf ="TboxFreqF" RelativePanel.Below="TboxFreqM" Margin="0,9,0,0"/>
-                    <TextBox x:ConnectionId='10' x:Name="TboxFreqF" Margin="5" RelativePanel.Below="TboxFreqM" PlaceholderText="Frequencia Final" Width="150"/>
+                    <TextBox x:ConnectionId='11' x:Name="TboxFreqF" Margin="5" RelativePanel.Below="TboxFreqM" PlaceholderText="Frequencia Final" Width="150"/>
                 </RelativePanel>
             </StackPanel>
         </StackPanel>
         <StackPanel VerticalAlignment="Center" Margin="0,80,0,0">
-            <ListView x:ConnectionId='3' x:Name="LvBtModulation"  ScrollViewer.VerticalScrollBarVisibility="Auto" VerticalAlignment="Center" HorizontalAlignment="Center" Height="300" Width="350" Margin="-30,0,0,0">
-                <CheckBox x:ConnectionId='4' x:Name="OptionsAllCheckBox" Content="Select all"/>
-                <CheckBox x:ConnectionId='5' x:Name="Option1CheckBox"    Content="GFSK" Margin="24,0,0,0" />
-                <CheckBox x:ConnectionId='6' x:Name="Option2CheckBox"    Content="pi/4-DQPSK" Margin="24,0,0,0" />
-                <CheckBox x:ConnectionId='7' x:Name="Option3CheckBox"    Content="8DQPSK" Margin="24,0,0,0" />
+            <ListView x:ConnectionId='4' x:Name="LvBtModulation"  ScrollViewer.VerticalScrollBarVisibility="Auto" VerticalAlignment="Center" HorizontalAlignment="Center" Height="300" Width="350" Margin="-30,0,0,0">
+                <CheckBox x:ConnectionId='5' x:Name="OptionsAllCheckBox" Content="Select all"/>
+                <CheckBox x:ConnectionId='6' x:Name="Option1CheckBox"    Content="GFSK" Margin="24,0,0,0" />
+                <CheckBox x:ConnectionId='7' x:Name="Option2CheckBox"    Content="pi/4-DQPSK" Margin="24,0,0,0" />
+                <CheckBox x:ConnectionId='8' x:Name="Option3CheckBox"    Content="8DQPSK" Margin="24,0,0,0" />
             </ListView>
         </StackPanel>
         <StackPanel VerticalAlignment="Bottom"
@@ -48,33 +48,24 @@
                         HorizontalAlignment="Left" />
             <StackPanel VerticalAlignment="Bottom"
                         HorizontalAlignment="Center" 
-                        Orientation="Horizontal" Margin="0,0,0,60">
-                <Button Content="Item 10"
-                    Width="110" 
-                    Height="30" 
-                    HorizontalAlignment="Left"
-                    VerticalAlignment="Bottom"
-                    Margin="0,5,5,5"/>
-                <Button Content="Item 11"
-                    Width="110" 
-                    Height="30"  
-                    HorizontalAlignment="Right"
-                    VerticalAlignment="Bottom"
-                    Margin="5" 
-                    />
-                <Button Content="Item 12"
-                    Width="110" 
-                    Height="30"  
-                    HorizontalAlignment="Right"
-                    VerticalAlignment="Bottom"
-                    Margin="5,5,0,5" />
+                        Orientation="Horizontal" Margin="0,0,0,0">
+                <ToggleSwitch x:ConnectionId='3' OffContent="Ensaios"
+                              OnContent="Modulações"
+                                x:Name="TsItem10"
+                                Width="310" 
+                                Height="30" 
+                                HorizontalAlignment="Stretch"
+                                VerticalAlignment="Bottom"
+                                                         
+                                Margin="0,5,5,5"/>
             </StackPanel>
             <Button Content="Confirmar"
                 Width="110"
                 Height="30"
-                Margin="0,-50,0,20"
+                Margin="0,5,5,20"
                 HorizontalAlignment="Right"
                 VerticalAlignment="Bottom"
+                
                 />
         </StackPanel>
 

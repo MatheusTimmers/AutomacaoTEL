@@ -22,6 +22,9 @@ namespace AutomaçãoTEL.Views
     /// </summary>
     public sealed partial class Bluetooth : Page
     {
+        readonly string[] BtModulations = new string[3] { "GFSK", "pi/4-DQPSK", "8DPSK" };
+        readonly string[] Items = new string[7] { "Largura de Faixa a 20 db", "Potência de Pico Máxima", "Emissão Fora da Faixa", "Separação de Canais de Salto", "Numero de Frequencia de Salto", "Numero de Ocupações", "Tempo de Ocupação"};
+
         public Bluetooth()
         {
             this.InitializeComponent();
@@ -78,6 +81,36 @@ namespace AutomaçãoTEL.Views
                     OptionsAllCheckBox.IsChecked = null;
                 }
             }
+        }
+
+        private void TsItem10_Click(object sender, RoutedEventArgs e)
+        {
+            LvBtModulation.Items.Clear();
+            if (TsItem10.IsOn)
+            {
+                CheckBox[] cBModulations = new CheckBox[3] { new CheckBox(), new CheckBox(), new CheckBox() };
+                cBModulations[0].Content = "Selecionar Todos";
+                LvBtModulation.Items.Add(cBModulations[0]);
+                for (int i = 1; i < BtModulations.Count(); i++)
+                {
+                    cBModulations[i].Content = BtModulations[i].ToString();
+                    cBModulations[i].Margin = new Thickness(24, 0, 0, 0);
+                    LvBtModulation.Items.Add(cBModulations[i]);
+
+                }
+                return;
+            }
+            CheckBox[] cBItems = new CheckBox[8] { new CheckBox(), new CheckBox(), new CheckBox(), new CheckBox(), new CheckBox(), new CheckBox(), new CheckBox(), new CheckBox() };
+            cBItems[0].Content = "Selecionar Todos";
+            LvBtModulation.Items.Add(cBItems[0]);
+            for (int i = 1; i < Items.Count(); i++)
+            {
+                cBItems[i].Content = Items[i].ToString();
+                cBItems[i].Margin = new Thickness(24, 0, 0, 0);
+                LvBtModulation.Items.Add(cBItems[i]);
+
+            }
+
         }
     }
 }

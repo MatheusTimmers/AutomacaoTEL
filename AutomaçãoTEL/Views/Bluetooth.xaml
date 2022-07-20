@@ -48,33 +48,24 @@
                         HorizontalAlignment="Left" />
             <StackPanel VerticalAlignment="Bottom"
                         HorizontalAlignment="Center" 
-                        Orientation="Horizontal" Margin="0,0,0,60">
-                <Button Content="Item 10"
-                    Width="110" 
-                    Height="30" 
-                    HorizontalAlignment="Left"
-                    VerticalAlignment="Bottom"
-                    Margin="0,5,5,5"/>
-                <Button Content="Item 11"
-                    Width="110" 
-                    Height="30"  
-                    HorizontalAlignment="Right"
-                    VerticalAlignment="Bottom"
-                    Margin="5" 
-                    />
-                <Button Content="Item 12"
-                    Width="110" 
-                    Height="30"  
-                    HorizontalAlignment="Right"
-                    VerticalAlignment="Bottom"
-                    Margin="5,5,0,5" />
+                        Orientation="Horizontal" Margin="0,0,0,0">
+                <ToggleSwitch OffContent="Ensaios"
+                              OnContent="Modulações"
+                                x:Name="TsItem10"
+                                Width="310" 
+                                Height="30" 
+                                HorizontalAlignment="Stretch"
+                                VerticalAlignment="Bottom"
+                                Toggled ="TsItem10_Click"
+                                Margin="0,5,5,5"/>
             </StackPanel>
             <Button Content="Confirmar"
                 Width="110"
                 Height="30"
-                Margin="0,-50,0,20"
+                Margin="0,5,5,20"
                 HorizontalAlignment="Right"
                 VerticalAlignment="Bottom"
+                
                 />
         </StackPanel>
 
