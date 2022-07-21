@@ -13,7 +13,7 @@
                     <Color x:Key="SystemAccentColor">Purple</Color>
                 </ResourceDictionary>
                 <ResourceDictionary x:Key="Dark">
-                    <Color x:Key="SystemAccentColor">Red</Color>
+                    <Color x:Key="SystemAccentColor">#6495ED</Color>
                 </ResourceDictionary>
                 <ResourceDictionary x:Key="Light">
                     <Color x:Key="SystemAccentColor">Purple</Color>

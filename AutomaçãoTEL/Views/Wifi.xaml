@@ -31,27 +31,10 @@
        
         <StackPanel VerticalAlignment="Center" Margin="0,80,0,0">
             <ListView x:Name="LvWifiModulation" ScrollViewer.VerticalScrollBarVisibility="Auto" VerticalAlignment="Center" HorizontalAlignment="Center" Height="300" Width="350" Margin="-30,0,0,0">
-                <CheckBox x:Name="OptionsAllCheckBox" Content="Selecionar Todos" IsThreeState="True"
-                          Checked="SelectAll_Checked" Unchecked="SelectAll_Unchecked"
-                          Indeterminate="SelectAll_Indeterminate"/>
-                <CheckBox x:Name="Option1CheckBox"    Content="802.11a" Margin="24,0,0,0" Checked="Option_Checked" Unchecked="Option_Unchecked"/>
-                <CheckBox x:Name="Option2CheckBox"    Content="802.11b" Margin="24,0,0,0" Checked="Option_Checked" Unchecked="Option_Unchecked"/>
-                <CheckBox x:Name="Option3CheckBox"    Content="802.11g" Margin="24,0,0,0" Checked="Option_Checked" Unchecked="Option_Unchecked"/>
-                <CheckBox x:Name="Option4CheckBox"    Content="802.11n (20)" Margin="24,0,0,0" Checked="Option_Checked" Unchecked="Option_Unchecked"/>
-                <CheckBox x:Name="Option5CheckBox"    Content="802.11ac (20)" Margin="24,0,0,0" Checked="Option_Checked" Unchecked="Option_Unchecked"/>
-                <CheckBox x:Name="Option6CheckBox"    Content="802.11ax (20)" Margin="24,0,0,0" Checked="Option_Checked" Unchecked="Option_Unchecked"/>
-                <CheckBox x:Name="Option7CheckBox"    Content="802.11n (40)" Margin="24,0,0,0" Checked="Option_Checked" Unchecked="Option_Unchecked"/>
-                <CheckBox x:Name="Option8CheckBox"    Content="802.11ac (40)" Margin="24,0,0,0" Checked="Option_Checked" Unchecked="Option_Unchecked"/>
-                <CheckBox x:Name="Option9CheckBox"    Content="802.11ax (40)" Margin="24,0,0,0" Checked="Option_Checked" Unchecked="Option_Unchecked"/>
-                <CheckBox x:Name="Option10CheckBox"    Content="802.11n (80)" Margin="24,0,0,0" Checked="Option_Checked" Unchecked="Option_Unchecked"/>
-                <CheckBox x:Name="Option11CheckBox"   Content="802.11ac (80)" Margin="24,0,0,0" Checked="Option_Checked" Unchecked="Option_Unchecked"/>
-                <CheckBox x:Name="Option12CheckBox"   Content="802.11ax (80)" Margin="24,0,0,0" Checked="Option_Checked" Unchecked="Option_Unchecked"/>
-                <CheckBox x:Name="Option13CheckBox"   Content="802.11ac (160)" Margin="24,0,0,0" Checked="Option_Checked" Unchecked="Option_Unchecked"/>
-                <CheckBox x:Name="Option14CheckBox"   Content="802.11ax (160)" Margin="24,0,0,0" Checked="Option_Checked" Unchecked="Option_Unchecked"/>
             </ListView>
         </StackPanel>
         <StackPanel VerticalAlignment="Bottom"
-                    HorizontalAlignment="Center"
+                    HorizontalAlignment="Left"
                     Orientation="Vertical">
             <TextBlock x:Name="TbAto237"
                         Text="Ensaios do Ato 237"
@@ -62,29 +45,16 @@
                         TextAlignment="Left"
                         HorizontalAlignment="Left" />
             <StackPanel VerticalAlignment="Bottom"
-                        HorizontalAlignment="Center" 
+                        HorizontalAlignment="Left" 
                         Orientation="Horizontal" Margin="0,0,0,60">
-                <Button x:Name="Item10Bt"
-                    Content="Item 10"
+                <ToggleSwitch x:Name="TsItems"
+                    OnContent="Ensaios"
+                    OffContent="Modulações"
                     Width="110" 
                     Height="30" 
                     HorizontalAlignment="Left"
                     VerticalAlignment="Bottom"
                     Margin="0,5,5,5"/>
-                <Button x:Name="Item11Bt"
-                    Content="Item 11"
-                    Width="110" 
-                    Height="30"  
-                    HorizontalAlignment="Right"
-                    VerticalAlignment="Bottom"
-                    Margin="5"/>
-                <Button x:Name="Item12Bt"
-                    Content="Item 12"
-                    Width="110" 
-                    Height="30"  
-                    HorizontalAlignment="Right"
-                    VerticalAlignment="Bottom"
-                    Margin="5,5,0,5"/>
             </StackPanel>
             <Button Content="Confirmar"
                 Width="110"

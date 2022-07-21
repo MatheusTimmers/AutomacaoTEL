@@ -22,33 +22,110 @@ namespace AutomaçãoTEL.Views
     /// </summary>
     public sealed partial class Wifi : Page
     {
+        readonly string[] WifiModulations = new string[14] { "Bluetooth Low Energy", "802.11a", "802.11b", "802.11g", "802.11n (20)", "802.11n (40)", "802.11n (80)", "802.11ac (20)", "802.11ac (40)", "802.11ac (80)", "802.11ax (20)", "802.11ax (40)", "802.11ax (80)", "802.11ax (160)"};
+        readonly string[] Items = new string[9] { "Largura de Faixa a 6 dB", "Largura de Faixa a 26 dB", "Potência de Pico Máxima", "Valor Médio da Potência máxima de Saida", "Pico da Densidade de Potência", "Valor Médio da Densidade Espectral", "Emissão fora de faixa", "Potencia de Saida", "Densidade Espectral de Potência" };
+        readonly CheckBox[] cBModulations = new CheckBox[15] { new CheckBox(), new CheckBox(), new CheckBox(), new CheckBox(), new CheckBox(), new CheckBox(), new CheckBox(), new CheckBox(), new CheckBox(), new CheckBox(), new CheckBox(), new CheckBox(), new CheckBox(), new CheckBox(), new CheckBox() };
+        readonly CheckBox[] cBItems = new CheckBox[10] { new CheckBox(), new CheckBox(), new CheckBox(), new CheckBox(), new CheckBox(), new CheckBox(), new CheckBox(), new CheckBox(), new CheckBox(), new CheckBox()};
+
         public Wifi()
         {
             this.InitializeComponent();
+            cBItems[0].Checked += SelectAll_Checked;
+            cBItems[0].Unchecked += SelectAll_Unchecked;
+            cBItems[0].Indeterminate += SelectAll_Indeterminate;
+            for (int i = 1; i < cBItems.Length; i++)
+            {
+                cBItems[i].Checked += Option_Checked;
+                cBItems[i].Unchecked += Option_Unchecked;
+
+            }
+            cBModulations[0].Checked += SelectAll_Checked;
+            cBModulations[0].Unchecked += SelectAll_Unchecked;
+            cBModulations[0].Indeterminate += SelectAll_Indeterminate;
+            for (int i = 1; i < cBModulations.Length; i++)
+            {
+                cBModulations[i].Checked += Option_Checked;
+                cBModulations[i].Unchecked += Option_Unchecked;
+
+            }
+            ChangeContentLv();
         }
 
         private void SelectAll_Checked(object sender, RoutedEventArgs e)
         {
-            Option1CheckBox.IsChecked = Option2CheckBox.IsChecked = Option3CheckBox.IsChecked = Option4CheckBox.IsChecked = Option5CheckBox.IsChecked
-            = Option6CheckBox.IsChecked = Option7CheckBox.IsChecked = Option8CheckBox.IsChecked = Option9CheckBox.IsChecked = Option10CheckBox.IsChecked
-            = Option11CheckBox.IsChecked = Option12CheckBox.IsChecked = Option13CheckBox.IsChecked = Option14CheckBox.IsChecked = true; 
+            if (TsItems.IsOn)
+            {
+                for (int i = 1; i <= Items.Length; i++)
+                {
+                    cBItems[i].IsChecked = true;
+                }
+                SetCheckedState();
+            }
+            else
+            {
+                for (int i = 1; i <= WifiModulations.Length; i++)
+                {
+                    cBModulations[i].IsChecked = true;
+                }
+                SetCheckedState();
+            }
         }
 
         private void SelectAll_Unchecked(object sender, RoutedEventArgs e)
         {
-            Option1CheckBox.IsChecked = Option2CheckBox.IsChecked = Option3CheckBox.IsChecked = Option4CheckBox.IsChecked = Option5CheckBox.IsChecked
-            = Option6CheckBox.IsChecked = Option7CheckBox.IsChecked = Option8CheckBox.IsChecked = Option9CheckBox.IsChecked = Option10CheckBox.IsChecked
-            = Option11CheckBox.IsChecked = Option12CheckBox.IsChecked = Option13CheckBox.IsChecked = Option14CheckBox.IsChecked = false;
+            if (TsItems.IsOn)
+            {
+                for (int i = 1; i <= Items.Length; i++)
+                {
+                    cBItems[i].IsChecked = false;
+                }
+                SetCheckedState();
+            }
+            else
+            {
+                for (int i = 1; i <= WifiModulations.Length; i++)
+                {
+                    cBModulations[i].IsChecked = false;
+                }
+                SetCheckedState();
+            }
+
         }
 
         private void SelectAll_Indeterminate(object sender, RoutedEventArgs e)
         {
-            if (Option1CheckBox.IsChecked == true && Option2CheckBox.IsChecked == true && Option3CheckBox.IsChecked == true && Option4CheckBox.IsChecked == true && Option5CheckBox.IsChecked == true &&
-                Option6CheckBox.IsChecked == true && Option7CheckBox.IsChecked == true && Option8CheckBox.IsChecked == true && Option9CheckBox.IsChecked == true && Option10CheckBox.IsChecked == true &&
-                Option11CheckBox.IsChecked == true && Option12CheckBox.IsChecked == true && Option13CheckBox.IsChecked == true && Option14CheckBox.IsChecked == true)
+            int cont = 0;
+            if (TsItems.IsOn)
             {
-                OptionsAllCheckBox.IsChecked = false;
+                for (int i = 1; i <= Items.Length; i++)
+                {
+                    if (cBItems[i].IsChecked == true)
+                    {
+                        cont++;
+                    }
+                }
+                if (cont == 7)
+                {
+                    cBItems[0].IsChecked = false;
+                }
+                SetCheckedState();
             }
+            else
+            {
+                for (int i = 1; i <= WifiModulations.Length; i++)
+                {
+                    if (cBModulations[i].IsChecked == true)
+                    {
+                        cont++;
+                    }
+                }
+                if (cont == 3)
+                {
+                    cBModulations[0].IsChecked = false;
+                }
+                SetCheckedState();
+            }
+
         }
 
         private void Option_Checked(object sender, RoutedEventArgs e)
@@ -63,23 +140,113 @@ namespace AutomaçãoTEL.Views
 
         private void SetCheckedState()
         {
-            if (Option1CheckBox != null)
+            int cont = 0;
+            if (TsItems.IsOn)
             {
-                if (Option1CheckBox.IsChecked == true && Option2CheckBox.IsChecked == true && Option3CheckBox.IsChecked == true && Option4CheckBox.IsChecked == true && Option5CheckBox.IsChecked == true &&
-                Option6CheckBox.IsChecked == true && Option7CheckBox.IsChecked == true && Option8CheckBox.IsChecked == true && Option9CheckBox.IsChecked == true && Option10CheckBox.IsChecked == true &&
-                Option11CheckBox.IsChecked == true && Option12CheckBox.IsChecked == true && Option13CheckBox.IsChecked == true && Option14CheckBox.IsChecked == true)
+                if (cBItems[1] != null)
                 {
-                    OptionsAllCheckBox.IsChecked = true;
+                    for (int i = 1; i <= Items.Length; i++)
+                    {
+                        if (cBItems[i].IsChecked == true)
+                        {
+                            cont++;
+                        }
+                    }
+                    if (cont == 7)
+                    {
+                        cBItems[0].IsChecked = true;
+                    }
+                    else
+                    {
+                        cont = 0;
+                        for (int i = 1; i <= Items.Length; i++)
+                        {
+                            if (cBItems[i].IsChecked == false)
+                            {
+                                cont++;
+                            }
+                        }
+                        if (cont == 7)
+                        {
+                            cBItems[0].IsChecked = false;
+                        }
+                        else
+                        {
+                            cBItems[0].IsChecked = null;
+                        }
+                    }
+
                 }
-                else if (Option1CheckBox.IsChecked == false && Option2CheckBox.IsChecked == false && Option3CheckBox.IsChecked == false && Option4CheckBox.IsChecked == false && Option5CheckBox.IsChecked == false &&
-                Option6CheckBox.IsChecked == false && Option7CheckBox.IsChecked == false && Option8CheckBox.IsChecked == false && Option9CheckBox.IsChecked == false && Option10CheckBox.IsChecked == false &&
-                Option11CheckBox.IsChecked == false && Option12CheckBox.IsChecked == false && Option13CheckBox.IsChecked == false && Option14CheckBox.IsChecked == false)
+            }
+            else
+            {
+                if (cBModulations[1] != null)
                 {
-                    OptionsAllCheckBox.IsChecked = false;
+                    for (int i = 1; i <= WifiModulations.Length; i++)
+                    {
+                        if (cBModulations[i].IsChecked == true)
+                        {
+                            cont++;
+                        }
+                    }
+                    if (cont == 3)
+                    {
+                        cBModulations[0].IsChecked = true;
+                    }
+                    else
+                    {
+                        cont = 0;
+                        for (int i = 1; i <= WifiModulations.Length; i++)
+                        {
+                            if (cBModulations[i].IsChecked == false)
+                            {
+                                cont++;
+                            }
+                        }
+                        if (cont == 3)
+                        {
+                            cBModulations[0].IsChecked = false;
+                        }
+                        else
+                        {
+                            cBModulations[0].IsChecked = null;
+                        }
+                    }
                 }
-                else
+            }
+        }
+
+        private void TsItem_Click(object sender, RoutedEventArgs e)
+        {
+            ChangeContentLv();
+        }
+
+        private void ChangeContentLv()
+        {
+            LvWifiModulation.Items.Clear();
+            if (TsItems.IsOn)
+            {
+                cBItems[0].Content = "Selecionar Todos";
+                cBItems[0].IsThreeState = true;
+                LvWifiModulation.Items.Add(cBItems[0]);
+                for (int i = 0; i < Items.Count(); i++)
                 {
-                    OptionsAllCheckBox.IsChecked = null;
+                    cBItems[i + 1].Content = Items[i].ToString();
+                    cBItems[i + 1].Margin = new Thickness(24, 0, 0, 0);
+                    LvWifiModulation.Items.Add(cBItems[i + 1]);
+                }
+            }
+            else
+            {
+                cBModulations[0].Content = "Selecionar Todos";
+                cBModulations[0].IsThreeState = true;
+                LvWifiModulation.Items.Add(cBModulations[0]);
+                for (int i = 0; i < WifiModulations.Length; i++)
+                {
+                    cBModulations[i + 1].Content = WifiModulations[i].ToString();
+                    cBModulations[i + 1].Margin = new Thickness(24, 0, 0, 0);
+                    LvWifiModulation.Items.Add(cBModulations[i + 1]);
+
                 }
             }
         }

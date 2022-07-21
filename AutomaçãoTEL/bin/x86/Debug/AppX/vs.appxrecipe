@@ -30,13 +30,13 @@
     <AppXManifest Include="C:\Users\10088365\source\repos\AutomaçãoTEL\AutomaçãoTEL\bin\x86\Debug\Core\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2022-07-21T18:16:24.622</Modified>
+      <Modified>2022-07-21T20:30:30.008</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="C:\Users\10088365\source\repos\AutomaçãoTEL\AutomaçãoTEL\bin\x86\Debug\AutomaçãoTEL.exe">
       <PackagePath>entrypoint\AutomaçãoTEL.exe</PackagePath>
-      <Modified>2022-07-21T18:16:23.430</Modified>
+      <Modified>2022-07-21T20:30:28.712</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\10088365\.nuget\packages\firebirdsql.data.firebirdclient\9.0.2\lib\netstandard2.0\FirebirdSql.Data.FirebirdClient.dll">
       <PackagePath>FirebirdSql.Data.FirebirdClient.dll</PackagePath>
@@ -102,39 +102,39 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\10088365\source\repos\AutomaçãoTEL\AutomaçãoTEL\bin\x86\Debug\AutomaçãoTEL.xr.xml">
       <PackagePath>AutomaçãoTEL.xr.xml</PackagePath>
-      <Modified>2022-07-21T16:50:42.426</Modified>
+      <Modified>2022-07-21T20:18:12.435</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\10088365\source\repos\AutomaçãoTEL\AutomaçãoTEL\bin\x86\Debug\App.xbf">
       <PackagePath>App.xbf</PackagePath>
-      <Modified>2022-07-21T18:16:23.191</Modified>
+      <Modified>2022-07-21T20:30:28.468</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\10088365\source\repos\AutomaçãoTEL\AutomaçãoTEL\bin\x86\Debug\MainPage.xbf">
       <PackagePath>MainPage.xbf</PackagePath>
-      <Modified>2022-07-21T18:16:23.192</Modified>
+      <Modified>2022-07-21T20:30:28.468</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\10088365\source\repos\AutomaçãoTEL\AutomaçãoTEL\bin\x86\Debug\Views\Login.xbf">
       <PackagePath>Views\Login.xbf</PackagePath>
-      <Modified>2022-07-21T18:16:23.192</Modified>
+      <Modified>2022-07-21T20:30:28.469</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\10088365\source\repos\AutomaçãoTEL\AutomaçãoTEL\bin\x86\Debug\Views\RegistrationAccount.xbf">
       <PackagePath>Views\RegistrationAccount.xbf</PackagePath>
-      <Modified>2022-07-21T18:16:23.192</Modified>
+      <Modified>2022-07-21T20:30:28.469</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\10088365\source\repos\AutomaçãoTEL\AutomaçãoTEL\bin\x86\Debug\Views\Bluetooth.xbf">
       <PackagePath>Views\Bluetooth.xbf</PackagePath>
-      <Modified>2022-07-21T18:16:23.192</Modified>
+      <Modified>2022-07-21T20:30:28.469</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\10088365\source\repos\AutomaçãoTEL\AutomaçãoTEL\bin\x86\Debug\Views\Config.xbf">
       <PackagePath>Views\Config.xbf</PackagePath>
-      <Modified>2022-07-21T18:16:23.193</Modified>
+      <Modified>2022-07-21T20:30:28.470</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\10088365\source\repos\AutomaçãoTEL\AutomaçãoTEL\bin\x86\Debug\Views\Home.xbf">
       <PackagePath>Views\Home.xbf</PackagePath>
-      <Modified>2022-07-21T18:16:23.193</Modified>
+      <Modified>2022-07-21T20:30:28.470</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\10088365\source\repos\AutomaçãoTEL\AutomaçãoTEL\bin\x86\Debug\Views\Wifi.xbf">
       <PackagePath>Views\Wifi.xbf</PackagePath>
-      <Modified>2022-07-21T18:16:23.193</Modified>
+      <Modified>2022-07-21T20:30:28.470</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Microsoft SDKs\Windows Kits\10\ExtensionSDKs\Microsoft.UniversalCRT.Debug\10.0.17134.0\\redist\Debug\x86\ucrtbased.dll">
       <PackagePath>ucrtbased.dll</PackagePath>
@@ -154,7 +154,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\10088365\source\repos\AutomaçãoTEL\AutomaçãoTEL\bin\x86\Debug\Core\AutomaçãoTEL.exe">
       <PackagePath>AutomaçãoTEL.exe</PackagePath>
-      <Modified>2022-07-21T18:16:24.616</Modified>
+      <Modified>2022-07-21T20:30:29.993</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>

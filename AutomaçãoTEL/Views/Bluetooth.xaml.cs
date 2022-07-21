@@ -16,22 +16,25 @@ namespace AutomaçãoTEL.Views
         readonly CheckBox[] cBModulations = new CheckBox[4] { new CheckBox(), new CheckBox(), new CheckBox(), new CheckBox() };
         readonly CheckBox[] cBItems = new CheckBox[8] { new CheckBox(), new CheckBox(), new CheckBox(), new CheckBox(), new CheckBox(), new CheckBox(), new CheckBox(), new CheckBox() };
 
-
         public Bluetooth()
         {
             this.InitializeComponent();
-            cBModulations[0].Checked += SelectAll_Checked;
             cBItems[0].Checked += SelectAll_Checked;
-            cBModulations[0].Unchecked += SelectAll_Unchecked;
             cBItems[0].Unchecked += SelectAll_Unchecked;
-            cBModulations[0].Indeterminate += SelectAll_Indeterminate;
             cBItems[0].Indeterminate += SelectAll_Indeterminate;
-            for (int i = 1; i < BtModulations.Length; i++)
+            for (int i = 1; i < cBItems.Length; i++)
+            {
+                cBItems[i].Checked += Option_Checked;
+                cBItems[i].Unchecked += Option_Unchecked;
+
+            }
+            cBModulations[0].Checked += SelectAll_Checked;
+            cBModulations[0].Unchecked += SelectAll_Unchecked;
+            cBModulations[0].Indeterminate += SelectAll_Indeterminate;
+            for (int i = 1; i < cBModulations.Length; i++)
             {
                 cBModulations[i].Checked += Option_Checked;
-                cBItems[i].Checked += Option_Checked;
                 cBModulations[i].Unchecked += Option_Unchecked;
-                cBItems[i].Unchecked += Option_Unchecked;
 
             }
             ChangeContentLv();
@@ -39,38 +42,41 @@ namespace AutomaçãoTEL.Views
 
         private void SelectAll_Checked(object sender, RoutedEventArgs e)
         {
-            if (!TsItem10.IsOn)
-            {
-                for (int i = 1; i <= BtModulations.Length; i++)
-                {
-                    cBModulations[i].IsChecked = true;
-                }
-            }
-            else
+            if (TsItem10.IsOn)
             {
                 for (int i = 1; i <= Items.Length; i++)
                 {
                     cBItems[i].IsChecked = true;
                 }
-                
+                SetCheckedState();
+            }
+            else
+            {
+                for (int i = 1; i <= BtModulations.Length; i++)
+                {
+                    cBModulations[i].IsChecked = true;
+                }
+                SetCheckedState();
             }
         }
 
         private void SelectAll_Unchecked(object sender, RoutedEventArgs e)
         {
-            if (!TsItem10.IsOn)
+            if (TsItem10.IsOn)
             {
-                for (int i = 1; i <= cBModulations.Length; i++)
-                {
-                    cBModulations[i].IsChecked = false;
-                }
-            }
-            else
-            {
-                for (int i = 1; i <= cBItems.Length; i++)
+                for (int i = 1; i <= Items.Length; i++)
                 {
                     cBItems[i].IsChecked = false;
                 }
+                SetCheckedState();
+            }
+            else
+            {
+                for (int i = 1; i <= BtModulations.Length; i++)
+                {
+                    cBModulations[i].IsChecked = false;
+                }
+                SetCheckedState();
             }
                 
         }
@@ -78,22 +84,7 @@ namespace AutomaçãoTEL.Views
         private void SelectAll_Indeterminate(object sender, RoutedEventArgs e)
         {
             int cont = 0;
-            if (!TsItem10.IsOn)
-            { 
-                for (int i = 1; i <= BtModulations.Length; i++)
-                {
-                    if (cBModulations[i].IsChecked == true)
-                    {
-                        cont++;
-                    }
-                }
-                if (cont == 3)
-                {
-                    cBModulations[0].IsChecked = false;
-                }
-                
-            }
-            else
+            if (TsItem10.IsOn)
             {
                 for (int i = 1; i <= Items.Length; i++)
                 {
@@ -106,6 +97,22 @@ namespace AutomaçãoTEL.Views
                 {
                     cBItems[0].IsChecked = false;
                 }
+                SetCheckedState();
+            }
+            else
+            {
+                for (int i = 1; i <= BtModulations.Length; i++)
+                {
+                    if (cBModulations[i].IsChecked == true)
+                    {
+                        cont++;
+                    }
+                }
+                if (cont == 3)
+                {
+                    cBModulations[0].IsChecked = false;
+                }
+                SetCheckedState();
             }
             
         }
@@ -123,43 +130,7 @@ namespace AutomaçãoTEL.Views
         private void SetCheckedState()
         {
             int cont = 0;
-            if (!TsItem10.IsOn)
-            {
-                if (cBModulations[1] != null)
-                {
-                    for (int i = 1; i <= BtModulations.Length; i++)
-                    {
-                        if (cBModulations[i].IsChecked == true)
-                        {
-                            cont++;
-                        }
-                    }
-                    if (cont == 3)
-                    {
-                        cBModulations[0].IsChecked = true;
-                    }
-                    else
-                    {
-                        for (int i = 1; i <= BtModulations.Length; i++)
-                        {
-                            if (cBModulations[i].IsChecked == false)
-                            {
-                                cont++;
-                            }
-                        }
-                        if (cont == 3)
-                        {
-                            cBModulations[0].IsChecked = false;
-                        }
-                        else
-                        {
-                            cBModulations[0].IsChecked = null;
-                        }
-                    }
-                    
-                }
-            }
-            else
+            if (TsItem10.IsOn)
             {
                 if (cBItems[1] != null)
                 {
@@ -193,10 +164,45 @@ namespace AutomaçãoTEL.Views
                             cBItems[0].IsChecked = null;
                         }
                     }
-                    
+
                 }
             }
-            
+            else
+            {
+                if (cBModulations[1] != null)
+                {
+                    for (int i = 1; i <= BtModulations.Length; i++)
+                    {
+                        if (cBModulations[i].IsChecked == true)
+                        {
+                            cont++;
+                        }
+                    }
+                    if (cont == 3)
+                    {
+                        cBModulations[0].IsChecked = true;
+                    }
+                    else
+                    {
+                        cont = 0;
+                        for (int i = 1; i <= BtModulations.Length; i++)
+                        {
+                            if (cBModulations[i].IsChecked == false)
+                            {
+                                cont++;
+                            }
+                        }
+                        if (cont == 3)
+                        {
+                            cBModulations[0].IsChecked = false;
+                        }
+                        else
+                        {
+                            cBModulations[0].IsChecked = null;
+                        }
+                    }
+                }
+            } 
         }
 
         private void TsItem10_Click(object sender, RoutedEventArgs e)
@@ -207,21 +213,7 @@ namespace AutomaçãoTEL.Views
         private void ChangeContentLv()
         {
             LvBtModulation.Items.Clear();
-            if (!TsItem10.IsOn)
-            {
-
-                cBModulations[0].Content = "Selecionar Todos";
-                cBModulations[0].IsThreeState = true;
-                LvBtModulation.Items.Add(cBModulations[0]);
-                for (int i = 0; i < BtModulations.Count(); i++)
-                {
-                    cBModulations[i + 1].Content = BtModulations[i].ToString();
-                    cBModulations[i + 1].Margin = new Thickness(24, 0, 0, 0);
-                    LvBtModulation.Items.Add(cBModulations[i + 1]);
-
-                }
-            }
-            else
+            if (TsItem10.IsOn)
             {
                 cBItems[0].Content = "Selecionar Todos";
                 cBItems[0].IsThreeState = true;
@@ -231,6 +223,19 @@ namespace AutomaçãoTEL.Views
                     cBItems[i + 1].Content = Items[i].ToString();
                     cBItems[i + 1].Margin = new Thickness(24, 0, 0, 0);
                     LvBtModulation.Items.Add(cBItems[i + 1]);
+                }
+            }
+            else
+            {
+                cBModulations[0].Content = "Selecionar Todos";
+                cBModulations[0].IsThreeState = true;
+                LvBtModulation.Items.Add(cBModulations[0]);
+                for (int i = 0; i < BtModulations.Count(); i++)
+                {
+                    cBModulations[i + 1].Content = BtModulations[i].ToString();
+                    cBModulations[i + 1].Margin = new Thickness(24, 0, 0, 0);
+                    LvBtModulation.Items.Add(cBModulations[i + 1]);
+
                 }
             }
         }
