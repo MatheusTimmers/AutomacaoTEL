@@ -28,11 +28,8 @@
             </StackPanel>
         </StackPanel>
         <StackPanel VerticalAlignment="Center" Margin="0,80,0,0">
-            <ListView x:Name="LvBtModulation"  ScrollViewer.VerticalScrollBarVisibility="Auto" VerticalAlignment="Center" HorizontalAlignment="Center" Height="300" Width="350" Margin="-30,0,0,0">
-                <CheckBox x:Name="OptionsAllCheckBox" Content="Select all"/>
-                <CheckBox x:Name="Option1CheckBox"    Content="GFSK" Margin="24,0,0,0" />
-                <CheckBox x:Name="Option2CheckBox"    Content="pi/4-DQPSK" Margin="24,0,0,0" />
-                <CheckBox x:Name="Option3CheckBox"    Content="8DQPSK" Margin="24,0,0,0" />
+            <ListView x:Name="LvBtModulation"  ScrollViewer.VerticalScrollBarVisibility="Auto" VerticalAlignment="Center" HorizontalAlignment="Center" Height="300" Width="350" Margin="-30,0,0,0" >
+               
             </ListView>
         </StackPanel>
         <StackPanel VerticalAlignment="Bottom"
@@ -49,8 +46,8 @@
             <StackPanel VerticalAlignment="Bottom"
                         HorizontalAlignment="Center" 
                         Orientation="Horizontal" Margin="0,0,0,0">
-                <ToggleSwitch OffContent="Ensaios"
-                              OnContent="Modulações"
+                <ToggleSwitch OffContent="Modulações"
+                              OnContent="Ensaios"
                                 x:Name="TsItem10"
                                 Width="310" 
                                 Height="30" 

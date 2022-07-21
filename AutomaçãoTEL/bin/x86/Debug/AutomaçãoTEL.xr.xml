@@ -149,14 +149,6 @@
       <RootMethod Name="GetVerticalScrollBarVisibility" />
       <RootMethod Name="SetVerticalScrollBarVisibility" />
     </RootType>
-    <RootType FullName="Windows.UI.Xaml.Controls.CheckBox">
-      <RootProperty Name="Content" />
-      <RootProperty Name="Margin" />
-      <RootProperty Name="IsThreeState" />
-      <RootEvent Name="Checked" />
-      <RootEvent Name="Unchecked" />
-      <RootEvent Name="Indeterminate" />
-    </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.RelativePanel">
       <RootProperty Name="HorizontalAlignment" />
       <RootProperty Name="Children" />
@@ -168,6 +160,14 @@
     <RootType FullName="AutomaçãoTEL.Views.Bluetooth" />
     <RootType FullName="AutomaçãoTEL.Views.Config" />
     <RootType FullName="AutomaçãoTEL.Views.Home" />
+    <RootType FullName="Windows.UI.Xaml.Controls.CheckBox">
+      <RootProperty Name="Content" />
+      <RootProperty Name="IsThreeState" />
+      <RootProperty Name="Margin" />
+      <RootEvent Name="Checked" />
+      <RootEvent Name="Unchecked" />
+      <RootEvent Name="Indeterminate" />
+    </RootType>
     <RootType FullName="AutomaçãoTEL.Views.Wifi" />
   </Roots.RootTypes>
 </Roots>
