@@ -23,7 +23,7 @@ namespace AutomaçãoTEL.Views
     public sealed partial class RegistrationAccount : Page
     {
 
-
+        public SoftwareBitmapSource BitmapSource { get; private set; }
 
         public RegistrationAccount()
         {
@@ -51,10 +51,10 @@ namespace AutomaçãoTEL.Views
             BitmapPixelFormat.Bgra8,
             BitmapAlphaMode.Premultiplied);
 
-            SoftwareBitmapSource bitmapSource = new SoftwareBitmapSource();
-            await bitmapSource.SetBitmapAsync(softwareBitmapBGR8);
+            BitmapSource = new SoftwareBitmapSource();
+            await BitmapSource.SetBitmapAsync(softwareBitmapBGR8);
 
-            personPicture.ProfilePicture = bitmapSource;
+            personPicture.ProfilePicture = BitmapSource;
         }
 
         private void BtRegister_Click(object sender, RoutedEventArgs e)
@@ -65,8 +65,8 @@ namespace AutomaçãoTEL.Views
                 DisplayMissNamorePassword();
                 return;
             }
-            User user = new User(TboxName.Text, TboxPassword.Password);
-            user.CreateUser(user);
+            User user = new User(TboxName.Text, TboxPassword.Password, BitmapSource);
+            user.CreateUser();
 
         }
 

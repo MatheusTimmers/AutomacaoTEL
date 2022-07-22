@@ -28,7 +28,7 @@
             </StackPanel>
         </StackPanel>
         <StackPanel VerticalAlignment="Center" Margin="0,80,0,0">
-            <ListView x:ConnectionId='4' x:Name="LvBtModulation"  ScrollViewer.VerticalScrollBarVisibility="Auto" VerticalAlignment="Center" HorizontalAlignment="Center" Height="300" Width="350" Margin="-30,0,0,0" >
+            <ListView x:ConnectionId='4' x:Name="LvBtModulation"  ScrollViewer.VerticalScrollBarVisibility="Auto" VerticalAlignment="Center" HorizontalAlignment="Left" Height="300" Width="350" Margin="10,0,0,0" >
                
             </ListView>
         </StackPanel>
@@ -39,7 +39,7 @@
                         Text="Ensaios do Ato 237"
                         FontSize="14"
                         Width="200"
-                        Margin="5,0,0,0"
+                        Margin="0,0,0,0"
                         FontFamily="Consolas"
                         TextAlignment="Left"
                         HorizontalAlignment="Left" />

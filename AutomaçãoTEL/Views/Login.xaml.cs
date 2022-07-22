@@ -32,12 +32,13 @@ namespace AutomaçãoTEL.Views
         private void BtLogin_Click(object sender, RoutedEventArgs e)
         {
             User user = new User(TboxName.Text, TboxPassword.Password);
-            if (!user.Login(user))
+            if (!user.Login())
             {
                 DisplayInvalidNameOrPassword();
                 return;
             }
             LoginPerformed();
+            user.LoadImage();
         }
 
         private async void DisplayInvalidNameOrPassword()

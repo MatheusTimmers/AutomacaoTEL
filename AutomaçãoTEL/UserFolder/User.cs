@@ -7,6 +7,9 @@ using AutomaçãoTEL;
 using System.Data;
 using System.Security.Cryptography;
 using System.Text;
+using Windows.UI.Xaml.Media.Imaging;
+using System.Collections.Generic;
+using Windows.Graphics.Imaging;
 
 namespace AutomaçãoTEL.UserFolder
 {
@@ -14,7 +17,15 @@ namespace AutomaçãoTEL.UserFolder
     {
         public string NameUser { get; private set; }
         public string PasswordUser { get; private set; }
+        public SoftwareBitmapSource BitmapSource { get; private set; }
 
+
+        public User(string nameUser, string passwordUser, SoftwareBitmapSource bitmapSource)
+        {
+            NameUser = nameUser;
+            PasswordUser = GenerateHashMd5(passwordUser);
+            BitmapSource = bitmapSource;
+        }
 
         public User(string nameUser, string passwordUser)
         {
@@ -39,14 +50,14 @@ namespace AutomaçãoTEL.UserFolder
 
 
 
-        public void CreateUser(object User)
+        public void CreateUser()
         {
             DataBaseAutentificator autentificator = new DataBaseAutentificator();
-            autentificator.ExecuteCommand(CommandType.Text, $"INSERT INTO UserData(NAME, USERPASSWORD)" +
-                                                                 $"VALUES ('{NameUser}','{PasswordUser}');");
+            autentificator.ExecuteCommand(CommandType.Text, $"INSERT INTO UserData(NAME, USERPASSWORD, USERIMAGE)" +
+                                                                 $"VALUES ('{NameUser}','{PasswordUser}','{BitmapSource}');");
         }
 
-        public bool Login(Object User)
+        public bool Login()
         {
             DataBaseAutentificator autentificator = new DataBaseAutentificator();
             var query = autentificator.ExecuteQuery(CommandType.Text, $"SELECT NAME, USERPASSWORD FROM UserData" +
@@ -57,6 +68,22 @@ namespace AutomaçãoTEL.UserFolder
             }
             return true;     
             
+        }
+
+        public int LoadImage()
+        {
+            DataBaseAutentificator autentificator = new DataBaseAutentificator();
+            var query = autentificator.ExecuteQuery(CommandType.Text, $"SELECT USERIMAGE FROM UserData" +
+                                                                $" WHERE NAME = '{NameUser}' AND USERPASSWORD = '{PasswordUser}';");
+
+            FileInfo arqImagem = new FileInfo(query.Rows[0].ToString());
+            long tamanhoArquivoImagem = arqImagem.Length;
+            FileStream fs = new FileStream(query.Rows[0].ToString(), FileMode.Open, FileAccess.Read, FileShare.Read);
+            byte[] vetorImagens = new byte[Convert.ToInt32(tamanhoArquivoImagem)];
+            int iBytesRead = fs.Read(vetorImagens, 0, Convert.ToInt32(tamanhoArquivoImagem));
+            fs.Close();
+            return iBytesRead;
+
         }
 
 

@@ -12,6 +12,8 @@ namespace AutomaçãoTEL
 {
     public class DataBaseAutentificator
     {
+
+
         private FbConnection CreateConnection()
         {
             var dir = Directory.GetCurrentDirectory();

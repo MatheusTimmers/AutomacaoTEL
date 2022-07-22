@@ -30,36 +30,37 @@
         </StackPanel>
        
         <StackPanel VerticalAlignment="Center" Margin="0,80,0,0">
-            <ListView x:Name="LvWifiModulation" ScrollViewer.VerticalScrollBarVisibility="Auto" VerticalAlignment="Center" HorizontalAlignment="Center" Height="300" Width="350" Margin="-30,0,0,0">
+            <ListView x:Name="LvWifiModulation" ScrollViewer.VerticalScrollBarVisibility="Auto" VerticalAlignment="Center" HorizontalAlignment="Left" Height="300" Width="350" Margin="10,0,0,0">
             </ListView>
         </StackPanel>
         <StackPanel VerticalAlignment="Bottom"
-                    HorizontalAlignment="Left"
+                    HorizontalAlignment="Center"
                     Orientation="Vertical">
             <TextBlock x:Name="TbAto237"
                         Text="Ensaios do Ato 237"
                         FontSize="14"
                         Width="200"
-                        Margin="5,0,0,0"
+                        Margin="0,0,0,0"
                         FontFamily="Consolas"
                         TextAlignment="Left"
                         HorizontalAlignment="Left" />
             <StackPanel VerticalAlignment="Bottom"
-                        HorizontalAlignment="Left" 
-                        Orientation="Horizontal" Margin="0,0,0,60">
+                        HorizontalAlignment="Center" 
+                        Orientation="Horizontal" Margin="0,0,0,0">
                 <ToggleSwitch x:Name="TsItems"
                     OnContent="Ensaios"
                     OffContent="Modulações"
-                    Width="110" 
+                    Width="310" 
                     Height="30" 
-                    HorizontalAlignment="Left"
+                    HorizontalAlignment="Stretch"
+                    Toggled ="TsItem_Click"
                     VerticalAlignment="Bottom"
                     Margin="0,5,5,5"/>
             </StackPanel>
             <Button Content="Confirmar"
                 Width="110"
                 Height="30"
-                Margin="0,-50,0,20"
+                Margin="0,5,5,20"
                 HorizontalAlignment="Right"
                 VerticalAlignment="Bottom"
                 />
